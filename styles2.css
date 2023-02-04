@@ -1,0 +1,298 @@
+/*/////////////////////*/
+/*  Trevor Achtermann  */
+/*  ARTG405            */
+/*  Spring 2022        */
+/*/////////////////////*/
+
+/* make the site touch the edge of the window*/
+*  {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ /*///////////////////////////////////////////////////////////////////////////////////////*/
+ /*                                  M O B I L E                                         */   
+ /*//////////////////////////////////////////////////////////////////////////////////////*/
+
+/*/////////////////////*/
+/*        BODY         */   
+/*/////////////////////*/
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+/*/////////////////////*/
+/*    X scrollbar      */   
+/*/////////////////////*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.container::-webkit-scrollbar { 
+    display: none;  
+}
+
+/*/////////////////////*/
+/*       HEADER        */   
+/*/////////////////////*/
+
+header {
+    background-color: #000000;
+}
+
+/*/////////////////////*/
+/*   TOP NAVIGATION    */   
+/*/////////////////////*/
+
+main {
+    min-height: calc(100vh - 30px);
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+section {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    
+}
+
+nav {
+    
+  
+    display: flex;
+    flex-direction: column;
+    font-family: monospace;
+    align-items: left;
+    justify-content: left;
+    padding-left: 15px;
+    padding-top: 10px;
+    
+}
+
+nav>a {
+    text-decoration: none;
+    padding: 12px;
+    color: rgb(255, 0, 85);
+    
+}
+
+nav>a:hover {
+    color: white;
+    border: 2px;
+    border-radius: 10px;
+}
+
+
+.hero {
+    display: flex;
+    height: calc(100vh - 30px);
+    background-image: url("../img/artboard1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    
+    
+    
+}
+
+
+.overlaytext {
+    display: flex;
+    flex-shrink: 1;
+    font-size: calc(10vh - 30px); 
+    color: rgb(255, 6, 60);
+    letter-spacing: 30px;
+    justify-content: center;
+    align-content: center;
+    
+    
+}
+
+
+.cardrow {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;    
+}
+
+.cardrow>div {
+    border: solid;
+    border-radius: 10px;
+    border-color: white;
+    height: 600px;
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    margin: 20px;
+    border: solid;
+    border-color: black;
+}
+
+.about>img {
+    flex: 1;
+    object-fit: contain;
+}
+.about>article {
+    flex: 2;
+    padding-left: 40px;
+    margin: 50px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+ /*///////////////////////////////////////////////////////////////////////////////////////*/
+ /*                                   D E S K T O P                                       */   
+ /*///////////////////////////////////////////////////////////////////////////////////////*/
+
+@media all and (min-width: 1000px) {
+
+    /*/////////////////////*/
+    /*       TOP NAV       */   
+    /*/////////////////////*/
+
+    nav {
+        background-color: black;
+        height: 30px;
+        font-family: monospace;
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    nav>a {
+        text-decoration: none;
+        padding: 12px;
+        color: rgb(255, 0, 85);
+        text-align: center;
+        
+    }
+
+    /*/////////////////////*/
+    /*        MAIN         */   
+    /*/////////////////////*/
+
+    main {
+        min-height: calc(100vh - 30px);
+        display: flex;
+        flex-direction: column;
+        font-family: monospace;
+        background-color: black;
+        padding-top: 35px;
+    }
+
+    /*/////////////////////*/
+    /*     CONTENT DIV     */   
+    /*/////////////////////*/
+
+    
+
+    /*/////////////////////*/
+    /*      SECTION        */   
+    /*/////////////////////*/
+
+    section {
+        background-color: black;
+        color: rgb(255, 0, 0);
+        display: flex;
+        font-family: monospace;
+     
+        
+    }
+
+    /*/////////////////////*/
+    /*      ARTICLE        */   
+    /*/////////////////////*/
+
+   
+
+    
+    .hero {
+        display: flex;
+        width: 100vw;
+        height: calc(100vh - 30px);
+        background-image: url("../img/artboard1.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        object-fit: contain;
+        
+        
+        
+        
+        
+    }
+
+    .overlaytext {
+        display: flex;
+        font-size: calc(10vh - 30px);  
+        color: rgb(255, 6, 60);
+        letter-spacing: 30px;
+        justify-content: center;
+        align-content: center;
+        padding: 360px;
+        
+
+    }
+
+    .cardrow {
+        display: flex;
+        flex-direction: row;
+        padding: 50px; 
+        margin: 20px;   
+    }
+    
+    .cardrow>div {
+        flex: 1;
+        border-radius: 10px;
+
+        height: 600px;
+        width: 400px;
+        padding: 20px;
+        margin: 20px;
+    }
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+        padding: 70px;
+        margin: 20px;
+        border: solid;
+        border-color: black;
+    }
+
+    .about>img {
+        flex: 1;
+        object-fit: contain;
+    }
+    .about>article {
+        flex: 2;
+        padding-left: 40px;
+        margin: 50px;
+        font-family: monospace;
+        font-size: 20px;
+    }
+
