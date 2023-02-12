@@ -1,0 +1,261 @@
+
+/* make the site touch the edge of the window*/
+*  {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/*/////////////////////*/
+/*    X scrollbar      */   
+/*/////////////////////*/
+
+::-webkit-scrollbar {
+    
+    display: none;
+}
+.container {
+    
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+.container::-webkit-scrollbar { 
+   
+    display: none;  
+}
+/*/////////////////////*/
+/*       HEADER        */   
+/*/////////////////////*/
+    header {
+
+    background-color: #000000;
+    }
+    .lockeddoor {
+        color: rgb(255, 255, 255);
+        padding-top: 25px;
+        font-size: 20px;
+        background-color: #000000;
+    }
+   
+    body {
+        background-color: #000000;
+    }
+    .rootnav {
+
+        background-color: none;
+        display: flex;
+        padding-left: 40px;
+        
+    }
+    .othernav {
+
+        display: flex;
+        
+        font-size: 14px;
+        text-decoration: none; 
+        font-family: monospace;
+        margin-top: -90px;
+        padding-left: 70px; 
+           
+    }
+    .resumenav {
+
+        background-color: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 330px;
+        padding-right: 0px;
+        margin-right: 0px;   
+    }
+    .cdanav {
+
+        background-color: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 140px;
+    }
+    .reportsnav {
+
+        background-color: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .notepadsnav {
+
+        background-color: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: -185px;
+        margin-top: 180px;
+    }
+    .pilotnav {
+        background-color: none;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+       
+    }
+    .root {
+        
+        padding-right: 120px;
+        padding-left: 65px;
+        color: rgb(143, 156, 159);
+        text-decoration: none; 
+        font-size: 14px;
+        font-family: monospace;
+        margin-top: -127px;
+        position: static;
+    }
+    nav>:hover {
+
+        color: rgb(181, 229, 248);
+        border: 2px;
+        border-radius: 10px;
+        font-size: 14px;
+        
+        
+    }
+    
+    .cda {
+        
+        color:rgb(53, 86, 101);
+        padding-top: 17px;
+        padding-bottom: 117px;
+        flex-direction: column;
+        text-decoration: none;
+        margin-left: -10px;
+    }
+    .reports {
+
+        color:rgb(28, 44, 52);
+        padding-top: 17px;
+        padding-bottom: 0px;
+        text-decoration: none;
+        margin-left: 0px;
+    }
+    .resume {
+
+        color:rgb(28, 44, 52);
+        padding-top: 17px;
+        padding-bottom: 0px;
+        text-decoration: none;
+    }
+    .pilot {
+
+        color:rgb(28, 44, 52);
+        padding-top: 17px;
+        padding-bottom: 0px;
+        text-decoration: none;
+        flex-direction: column;
+    }
+    .notepad {
+
+        color:rgb(28, 44, 52);
+        padding-left: 115px;
+        padding-top: 17px;
+        padding-bottom: 0px; 
+        text-decoration: none;  
+    }
+    .format {
+        
+        color:rgb(53, 86, 101);
+        padding-left: 0px;
+        padding-top: 17px;
+        padding-bottom: 0px;
+        text-decoration: none;
+    }
+    .otherproject {
+        background-color: none;
+        color:rgb(53, 86, 101);
+        display: flex;
+        flex-direction: column;
+        margin-left: -50px;
+        padding-top: 17px;;
+        text-decoration: none;
+    }
+    div>p {
+        
+        padding: 12px;
+        color: rgb(0, 255, 26);
+        text-align: center;
+        text-decoration: none;
+     }
+    main {
+
+        
+        display: flex;
+        flex-direction: column;
+        font-family: monospace;
+        background-color: rgb(0, 0, 0);
+    } 
+    .pdfinvert {
+
+        
+        border:none;
+        align-self: flex-end;
+        height: 100vh;
+        filter:contrast(300%);
+        filter:invert(100);
+        overflow: hidden;
+        margin-top: -675px;
+        margin-right: -30px;
+        scale: 100%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        
+    }
+    .doorgif {
+
+        width:7%;
+        height:100%;
+        scale: 100%;
+        overflow: hidden;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        margin-left: -30px;
+        
+    }
+    iframe {
+        overflow: hidden;
+    }
+    section {
+        
+        background-color: black;
+        color: rgb(0, 76, 255);
+        display: flex;
+        font-family: monospace; 
+    }
+    footer {
+
+        background-color: #000000;
+        color: rgb(255, 255, 255);
+        font-family: monospace;
+        padding: 50px;
+        text-decoration: none;
+        height: 10px;
+        
+    }
+    .activelink {
+        color: rgb(181, 229, 248);
+        
+        
+    }
+
+    .tooltip:hover:after{ 
+         content: attr(data-tooltip);
+         color: rgb(181, 229, 248);
+
+    }
+    .hovertext:hover {
+        color: rgb(181, 229, 248);
+
+    }
