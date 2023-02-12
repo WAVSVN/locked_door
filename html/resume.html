@@ -1,55 +1,110 @@
 <!--
-    Trevor Achtermann
-    ARTG405
-    Spring 2022
+    
+    © WAVSVN
+    there are often multiple ways to open a locked door 
+
 -->
-
-
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Trevor Achtermann">
-        <meta name="description" content="project_site">
-        <title>locked_door</title>
-        <link href="locked_door.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trevor Achtermann">
+    <meta name="description" content="project_site">
+    <title>locked_door</title>
+    <link href="/lockeddoor/locked_door.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 <body>
-    <!--HEADER-->
+   <pre class="lockeddoor">          locked_door</pre>
     <header>
-        <!--NAV-->
-        <nav>
-            <iframe class="doorgif" src="_video/door.gif" frameborder="0" scrolling="no"></iframe>
-            <a class="primary" href="index.html">0000</a>
-            <a class="primary" class="activelink" href="resume.html">resume</a>            
-            <a class="primary" href="CDA_bootcamp.html">CDA_bootcamp</a>
-            <a class="primary" href="0000">other projects</a>
+        <iframe class="doorgif" src="/lockeddoor/video/door.gif" frameborder="0" scrolling="no"></iframe>
+        <nav class="rootnav">
+            
+            <a class="root" class="activelink" href="/index.html"><pre>011100
+100110
+010101
+110011
+011001
+010111
+010000</pre></a>
+            <a class="root activelink" href="/lockeddoor/html/resume.html">\ resume</a>            
+            <a class="root" href="resume.html">\ CDA_bootcamp</a>
+            <a class="root" href="0000">\ other projects</a>
             
         </nav>
-        <nav>
-            
-            <a class="secondary" href="CDA_bootcamp.html">           
-                                                   analysis \reports  </a>
-            <a class="secondary" href="0000">WAVSVN</a>
-            
+    <div class="othernav">
+        <nav class="resumenav">
+            <a class="format" href="/index.html">\\ format</a>
         </nav>
+                <nav class="reportsnav">
+                    <a class="resume" href="index.html">> .docx</a>
+                    <a class="resume activelink" href="index.html">> .pdf</a>
+                </nav>
+        <nav class="cdanav">
+            <a class="cda" href="index.html"> \\ reports</a>
+            <a class="cda" href="index.html">\\ notepads</a>
+        </nav> 
+                <nav class="reportsnav">
+                    <a class="reports" href="index.html">> report1</a>
+                    <a class="reports" href="index.html">> report2</a>
+                </nav>
+                <nav class="notepadsnav">
+                    <a class ="notepad" href="index.html">> windows_domain.md</a>
+                    <a class ="notepad" href="index.html">> windows_logs.md</a>
+                    <a class ="notepad" href="index.html">> i_o_and_registry.md</a>
+                    <a class ="notepad" href="index.html">> net_traffic_1.md</a>
+                    <a class ="notepad" href="index.html">> nothing_but_net.md</a>
+                    <a class ="notepad" href="index.html">> cvss.md</a>
+                    <a class ="notepad" href="index.html">> advanced windows.md</a>
+                    <a class ="notepad" href="index.html">> security_operations.md</a>
+                    <a class ="notepad" href="index.html">> analysis.process.md</a>
+                    <a class ="notepad" href="index.html">> domain_authentication_and_access.md</a>
+                </nav>
+                <nav class="otherprojectnav">
+                    <a class ="otherproject" href="index.html">\\ osc/pilot </a>
+                </nav>
+                <nav class="pilotnav">
+                    <a class="pilot" href="index.html">> starship.plt</a>
+                    <a class="pilot" href="index.html">> serum x69.plt</a>
+                    <a class="pilot" href="index.html">> fkfx_influx.plt</a>
+                    <a class="pilot" href="index.html">> punchbox.plt</a>
+                    <a class="pilot" href="index.html">> ableton.plt</a>
+
+
+                </nav>
+                
+            
+    </div>
+    
     </header>
-    <!--MAIN-->
+   
     <main>
-        <!--SECTION 1-->
-        <embed class="pdf" src="_image/resume.pdf"></embed>
+        <iframe class="pdfinvert"
+        onload="window.parent.scrollTo
+        ({
+        top: 0,
+        right:100,
+        });"
+        allowtransparency="true"
+        src="/lockeddoor/image/resume.pdf"
+        frameborder="0"
+        style="width:35.5vw";
+        >
+        </iframe>
+     
     </main>
-    <!--FOOTER-->
+
+    </body>
     <footer>
         <p>
             © WAVSVN
         </p>
     </footer>
-    
-    
-</body>
 </html>
+
+
+
+
