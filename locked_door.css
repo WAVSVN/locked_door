@@ -200,18 +200,20 @@
         font-family: monospace;
         background-color: rgb(0, 0, 0);
     } 
-    .pdf {
+    .pdfinvert {
 
         
         border:none;
         align-self: flex-end;
-        height: 95vh;
+        height: 100vh;
         filter:contrast(300%);
         filter:invert(100);
         overflow: hidden;
         margin-top: -675px;
         margin-right: -30px;
-        scale: 107%;
+        scale: 100%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
         
     }
     .doorgif {
