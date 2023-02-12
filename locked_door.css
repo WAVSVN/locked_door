@@ -213,6 +213,20 @@
         padding-bottom: 0px;
         
     }
+    .pdf {
+
+        
+        border:none;
+        align-self: flex-end;
+        height: 100vh;
+        overflow: hidden;
+        margin-top: -675px;
+        margin-right: -30px;
+        scale: 100%;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        
+    }
     .doorgif {
 
         width:7%;
