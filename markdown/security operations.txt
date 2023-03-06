@@ -1,0 +1,14 @@
+security operations 
+
+ELK - 
+
+Elasticsearch
+Logstash
+Kebana
+
+
+
+intelligence is data that has been analyzed 
+
+threat intelligence is a high noise source for intel 
+

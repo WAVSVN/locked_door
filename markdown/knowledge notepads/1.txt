@@ -1,0 +1,8 @@
+to find mac for 10.11.11.145
+
+look under ethernet II under a packet to find a mac address
+
+90:b1:1c:95:58:b4
+
+a single device can have multiple user agents streams
+its possible that a user agent does not correlate to a device

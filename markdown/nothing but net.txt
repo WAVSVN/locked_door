@@ -1,0 +1,13 @@
+nothing but net 
+\\\\\\\\\\\\\\\
+
+vwifibus driver has no publisher 
+
+Networkdll.dll in program data 
+
+netstat -b 
+shows all network connections as well as what process theyre tied to 
+
+TA0011 command and control 
+
+used to get around a firewall on a host machine 

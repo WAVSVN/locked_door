@@ -1,0 +1,10 @@
+            
+Advanced Windows 2 
+
+dll and exe are both pe (portable executable) files 
+dlls are loaded and often run within another exe 
+exes are more likely to run standalone
+
+every service is an application
+not every application is a service 
+

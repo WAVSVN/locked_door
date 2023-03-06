@@ -1,0 +1,25 @@
+linkedinheader: 
+
+senderip: 209.85.222.169
+receiverip: ip-172-16-5-10
+
+from address: itgoodcorp@gmail.com
+to: goodcorp@leveleffect.com
+x-google-original-from (alias for the real address) : support@linkedin.com                     {original sender?}
+
+email contains href links to:
+
+https://172.16.5.10?rid=FCYtQGI                                  {referenced 10 times?} 
+https://www.linkedin.com/help/linkedin/answer/67?lang=en
+
+
+dkim = pass
+dkim body hash did not verify 
+
+
+
+
+
+
+
+
