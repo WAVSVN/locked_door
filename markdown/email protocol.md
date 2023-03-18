@@ -1,4 +1,4 @@
-email formulation 
+email protocol 
 
 \\\\\
 

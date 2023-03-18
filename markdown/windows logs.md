@@ -1,4 +1,4 @@
-windows logs 
+useful windows log info using event viewer
 
 subsequent id's found in event viewer 
 
@@ -10,6 +10,7 @@ logs should be kept in an offsite backup in the event an adversary tampers with 
 
 > 0x usually means what follows is hex code 
 > windows startup process id is always 4
+> = at the end of a string can indicate base64 encoding
 
 4688 - process start 
 4689 - process end 

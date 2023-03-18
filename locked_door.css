@@ -36,6 +36,7 @@
     .lockeddoor {
         color: rgb(255, 255, 255);
         padding-top: 25px;
+        margin-left: -45px;
         font-size: 20px;
         background-color: #000000;
     }
@@ -47,18 +48,21 @@
 
         background-color: none;
         display: flex;
-        padding-left: 40px;
+        margin-left: 80px;
+        color:rgb(53, 86, 101);
+     
         
     }
     .othernav {
 
         display: flex;
-        
+        flex-direction: row;
         font-size: 14px;
         text-decoration: none; 
         font-family: monospace;
         margin-top: -90px;
-        padding-left: 70px; 
+        padding-left: 90px; 
+        color:rgb(53, 86, 101);
            
     }
     .resumenav {
@@ -67,7 +71,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding-left: 330px;
+        padding-left: 200px;
         padding-right: 0px;
         margin-right: 0px;   
     }
@@ -77,7 +81,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding-left: 140px;
+        padding-left: 170px;
     }
     .reportsnav {
 
@@ -86,6 +90,8 @@
         display: flex;
         flex-direction: column;
         margin-top: 30px;
+        color:rgb(53, 86, 101);
+        
     }
     .notepadsnav {
 
@@ -93,8 +99,8 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: -185px;
-        margin-top: 180px;
+        margin-left: -135px;
+        margin-top: 400px;
     }
     .pilotnav {
         background-color: none;
@@ -128,11 +134,11 @@
     .cda {
         
         color:rgb(53, 86, 101);
-        padding-top: 17px;
-        padding-bottom: 117px;
         flex-direction: column;
         text-decoration: none;
-        margin-left: -10px;
+        margin-top: -150px;
+        margin-left: -200px;
+      
     }
     .reports {
 
@@ -140,7 +146,7 @@
         padding-top: 17px;
         padding-bottom: 0px;
         text-decoration: none;
-        margin-left: 0px;
+        
     }
     .resume {
 
@@ -160,7 +166,7 @@
     .notepad {
 
         color:rgb(28, 44, 52);
-        padding-left: 115px;
+        padding-left: -180px;
         padding-top: 17px;
         padding-bottom: 0px; 
         text-decoration: none;  
@@ -216,13 +222,14 @@
     }
     .pdf {
 
-        
+        filter: contrast(1.9);
+        filter: invert(100);
         border:none;
         align-self: flex-end;
         height: 100vh;
         width: 36vw;
         overflow: hidden;
-        margin-top: -710px;
+        margin-top: -920px;
         margin-right: -30px;
         scale: 100%;
         margin-bottom: 0px;
@@ -237,9 +244,9 @@
         height: 100vh;
         width: 36vw;
         overflow: hidden;
-        margin-top: -600px;
+        margin-top: -920px;
         margin-right: -30px;
-        scale: 100%;
+        scale: 100vh;
         margin-bottom: 0px;
         padding-bottom: 0px;
         
@@ -252,8 +259,22 @@
         overflow: hidden;
         margin-bottom: 0px;
         margin-top: 0px;
-        margin-left: -30px;
+        margin-left: 10px;
         
+    }
+
+    .dllink {
+        color: rgb(143, 156, 159);
+        display: flex;
+        flex: end;
+        margin-top: -1000px;
+        margin-left: 1800px;
+        text-decoration: none;
+    }
+
+    .dllink:hover {
+        color: rgb(181, 229, 248);
+
     }
     iframe {
         overflow: hidden;

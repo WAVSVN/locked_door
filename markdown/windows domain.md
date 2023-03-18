@@ -63,7 +63,7 @@ best practice is to have the least number of domain controllers and domain names
 
 
 
->whenever you create a domain, a forest and tree are subsequently created by default
+> whenever you create a domain, a forest and tree are subsequently created by default
 
  - changes to active directory at the root domain controller replicate to all child domains and other root domain controllers that are in other trees ( if configered to do so )
 

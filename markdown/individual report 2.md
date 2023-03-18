@@ -58,7 +58,7 @@ persistence
     >c:/windows/system32/rundll32.exe,c:/windows/system32/lanman.dll,register 
     <rundll32.exe is loading <lanman.dll with the <register function>>>
 
-    - lanman presumably stands for local area network manager
+    - lanman presumably stands for local area network manager, still unsure if this is actually malicious
      
 
 

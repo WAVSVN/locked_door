@@ -9,3 +9,6 @@ five root keys:
 - HKEY_CLASSES_ROOT ( HKCR )
 - HKEY_CURRENT_USER ( HKCU - symbolic link to HKU )
 - HKEY_C_C (HKCC)
+
+> registry tampering is often used to instantiate persistence or mess with otherwise benign services and processes 
+
