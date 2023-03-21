@@ -2,7 +2,13 @@
 
 field notes for stuff I find useful for both red and blue purposes
 
+
+
+
 these evolve over time
+
+
+
 
 theyre written in markdown so if you have a program that can filter syntax for that it helps with reading
 
