@@ -222,8 +222,8 @@
     }
     .pdf {
 
-        filter: contrast(1.9);
-        filter: invert(100);
+        filter: contrast(1.0);
+  
         border:none;
         align-self: flex-end;
         height: 100vh;
