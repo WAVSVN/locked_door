@@ -1,7 +1,0 @@
-even if it feels redundant 
-
-have script block logging enabled as a company wide policy 
-
-going more depth into addtional stragtegies 
-
-process.name.text:"binary_name" or powershell.file.script_block_text: * 
