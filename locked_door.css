@@ -328,3 +328,6 @@
         color: rgb(181, 229, 248);
 
     }
+    script {
+        filter: invert(10);
+    }
