@@ -332,15 +332,14 @@
     button {
         cursor: pointer;
         width: 120px;
+        height: 40px;
         padding: 10px;
         font-family: 'Arial';
         font-size: 15px;
         border-radius: 5px;
-        border: 1px #ffffff;
-        background-color:#00ffd5;
-        color: #ff0000;
-       
-        display: flex;
-        flex-direction: column;    
+        border: 5px #ffffff;
+        background-color:#000000;
+        color: #ffffff;
+        
 
-    }
+    }   
