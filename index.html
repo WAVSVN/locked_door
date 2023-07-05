@@ -60,8 +60,8 @@
                     <a class="cda" href="/lockeddoor/field.notes.html">\\ fi̶èl̶d͟_̷n͜o͠te̛s̕</a>
                 
                 
-                    <a class ="notepad" href="/lockeddoor/windows.domain.html">> windows_domain.md</a>
-                    <a class ="notepad" href="/lockeddoor/windows.logs.html">> windows_logs.md</a>
+                    <a class ="notepad" href="markdown/windows domain.md">> windows_domain.md</a>
+                    <a class ="notepad" href="markdown/windows logs.md">> windows_logs.md</a>
                     <a class ="notepad" href="/lockeddoor/io.registry.html">> i_o_and_registry.md</a>
                     <a class ="notepad" href="/lockeddoor/analysis.process.html">> an.analysis.process.md</a>
                     <a class ="notepad" href="/lockeddoor/cyber.threat.intelligence.html">> cyber.threat.intelligence.md</a>
@@ -96,11 +96,34 @@
     </div>
     
     </header>
-   
-    <main>
-        
-     
-    </main>
+
+    <div id="popup" class="hidden">
+        <a class="close" href="#">X</a>
+        <pre></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let popup = $("#popup");
+
+        $("nav a").on("click", e => { // when a link in a nav is clicked
+            $.get(e.target.href, (data, status) => { // make a get request to the link
+                $("#popup pre").empty(); // empty the content
+                $("#popup pre").html(data); // add new content
+                popup.removeClass("hidden"); // unhide the popup
+            });
+
+            e.preventDefault();
+            return false;
+        });
+
+        $("#popup .close").on("click", e => { // when a link in a nav is clicked
+            popup.addClass("hidden");
+
+            e.preventDefault();
+            return false;
+        });
+    </script>
 
     </body>
     <footer>
