@@ -96,34 +96,10 @@
 
     </header>
 
-    <div id="popup" class="hidden">
-        <a class="close" href="#">X</a>
-        <pre></pre>
-    </div>
+    <main>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        let popup = $("#popup");
 
-        $("nav a").on("click", e => { // when a link in a nav is clicked
-            $.get(e.target.href, (data, status) => { // make a get request to the link
-                $("#popup pre").empty(); // empty the content
-                $("#popup pre").html(data); // add new content
-                popup.removeClass("hidden"); // unhide the popup
-            });
-
-            e.preventDefault();
-            return false;
-        });
-
-      //  $("#popup .close").on("click", e => { // when a link in a nav is clicked
-          //  popup.addClass("hidden");
-
-           // e.preventDefault();
-           // return false;
-      //  });
-    </script>
-
+    </main>
     <footer>
         <p>
             © WAVSVN
