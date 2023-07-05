@@ -10,25 +10,25 @@
 
 
 /*/////////////////////*/
-/*    X scrollbar      */   
+/*    X scrollbar      */
 /*/////////////////////*/
 
 ::-webkit-scrollbar {
-    
+
     display: none;
 }
 .container {
-    
-    -ms-overflow-style: none;  
-    scrollbar-width: none; 
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
-.container::-webkit-scrollbar { 
-   
-    display: none;  
+.container::-webkit-scrollbar {
+
+    display: none;
 }
 /*/////////////////////*/
-/*       HEADER        */   
-/*/////////////////////*/      
+/*       HEADER        */
+/*/////////////////////*/
     header {
 
     background-color: #000000;
@@ -40,7 +40,7 @@
         font-size: 20px;
         background-color: #000000;
     }
-   
+
     body {
         background-color: #000000;
     }
@@ -50,20 +50,20 @@
         display: flex;
         margin-left: 80px;
         color:rgb(53, 86, 101);
-     
-        
+
+
     }
     .othernav {
 
         display: flex;
         flex-direction: row;
         font-size: 14px;
-        text-decoration: none; 
+        text-decoration: none;
         font-family: monospace;
         margin-top: -90px;
-        padding-left: 90px; 
+        padding-left: 90px;
         color:rgb(53, 86, 101);
-           
+
     }
     .resumenav {
 
@@ -73,7 +73,7 @@
         flex-direction: column;
         padding-left: 200px;
         padding-right: 0px;
-        margin-right: 0px;   
+        margin-right: 0px;
     }
     .cdanav {
 
@@ -91,7 +91,7 @@
         flex-direction: column;
         margin-top: 30px;
         color:rgb(53, 86, 101);
-        
+
     }
     .notepadsnav {
 
@@ -108,14 +108,14 @@
         display: flex;
         flex-direction: column;
         margin-top: 30px;
-       
+
     }
     .root {
-        
+
         padding-right: 120px;
         padding-left: 65px;
         color: rgb(143, 156, 159);
-        text-decoration: none; 
+        text-decoration: none;
         font-size: 14px;
         font-family: monospace;
         margin-top: -127px;
@@ -127,18 +127,18 @@
         border: 2px;
         border-radius: 10px;
         font-size: 14px;
-        
-        
+
+
     }
-    
+
     .cda {
-        
+
         color:rgb(53, 86, 101);
         flex-direction: column;
         text-decoration: none;
         margin-top: -150px;
         margin-left: -200px;
-      
+
     }
     .reports {
 
@@ -146,7 +146,7 @@
         padding-top: 17px;
         padding-bottom: 0px;
         text-decoration: none;
-        
+
     }
     .resume {
 
@@ -168,11 +168,11 @@
         color:rgb(28, 44, 52);
         padding-left: -180px;
         padding-top: 17px;
-        padding-bottom: 0px; 
-        text-decoration: none;  
+        padding-bottom: 0px;
+        text-decoration: none;
     }
     .format {
-        
+
         color:rgb(53, 86, 101);
         padding-left: 0px;
         padding-top: 17px;
@@ -189,7 +189,7 @@
         text-decoration: none;
     }
     div>p {
-        
+
         padding: 12px;
         color: rgb(0, 255, 26);
         text-align: center;
@@ -197,15 +197,19 @@
      }
     main {
 
-        
+
         display: flex;
         flex-direction: column;
         font-family: monospace;
         background-color: rgb(0, 0, 0);
-    } 
+    }
+
+    body {
+        color: white;
+    }
     .pdfinvert {
 
-        
+
         border:none;
         align-self: flex-end;
         height: 90vh;
@@ -218,12 +222,12 @@
         scale: 100%;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        
+
     }
     .pdf {
 
         filter: contrast(1.0);
-  
+
         border:none;
         align-self: flex-end;
         height: 100vh;
@@ -234,7 +238,7 @@
         scale: 100%;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        
+
     }
     .md {
 
@@ -249,8 +253,8 @@
         scale: 100vh;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        
-        
+
+
     }
 
     .x0 {
@@ -261,12 +265,12 @@
         height: 100vh;
         width: 36vw;
         overflow: hidden;
-        margin-top: -70px;       
+        margin-top: -70px;
         margin-right: 90px;
         scale: 100vh;
         margin-bottom: 0px;
         padding-bottom: 0px;
-        
+
     }
     .doorgif {
 
@@ -277,7 +281,7 @@
         margin-bottom: 0px;
         margin-top: 0px;
         margin-left: 10px;
-        
+
     }
 
     .dllink {
@@ -297,11 +301,11 @@
         overflow: hidden;
     }
     section {
-        
+
         background-color: black;
         color: rgb(0, 76, 255);
         display: flex;
-        font-family: monospace; 
+        font-family: monospace;
     }
     footer {
 
@@ -311,15 +315,15 @@
         padding: 50px;
         text-decoration: none;
         height: 10px;
-        
+
     }
     .activelink {
         color: rgb(181, 229, 248);
-        
-        
+
+
     }
 
-    .tooltip:hover:after{ 
+    .tooltip:hover:after{
          content: attr(data-tooltip);
          color: rgb(181, 229, 248);
 
@@ -341,6 +345,10 @@
         background-color:#000000;
         color:rgb(53, 86, 101);
         margin-top: 30px;
-        
 
-    }   
+
+    }
+
+    .hidden {
+        color: white;
+    }
