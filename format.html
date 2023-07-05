@@ -1,7 +1,7 @@
 <!--
-    
+
     © WAVSVN
-    there are often multiple ways to open a locked door 
+    there are often multiple ways to open a locked door
 
 -->
 
@@ -19,13 +19,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-     
-        
+
+
    <pre class="lockeddoor">          locked_door</pre>
     <header>
         <iframe class="doorgif" src="/lockeddoor/video/door.gif" frameborder="0" scrolling="no"></iframe>
         <nav class="rootnav">
-            
+
             <a class="root" href="/lockeddoor/index.html">
 <pre>011100
 100110
@@ -35,33 +35,33 @@
 010111
 010000
 </pre></a>
-            <a class="root activelink" href="/lockeddoor/resume.html">\ trevor.achtermann</a>            
+            <a class="root activelink" href="/lockeddoor/resume.html">\ trevor.achtermann</a>
             <a class="root" href="/lockeddoor/cdabootcamp.html">\ CDA_bootcamp</a>
             <a class="root" href="/lockeddoor/other.projects.html">\ other projects</a>
-            
+
         </nav>
     <div class="othernav">
         <nav class="resumenav">
             <a class="format activelink" href="/lockeddoor/format.html">\̷\͏ r̕esu̴me</a>
         </nav>
                 <nav class="reportsnav">
-                 
+
                 </nav>
                 <button class="activelink" type="button" id="view-pdf-btn" onclick="previewFile()" disabled>view resume</button>
-        
+
                 <nav class="cdanav">
                     <a class="reports" href="/lockeddoor/reports.html"> \\ reports</a>
-           
-                </nav> 
+
+                </nav>
                 <nav class="reportsnav">
                     <a class="reports" href="/lockeddoor/0000.html">> 0000000 0000000000 0000 000000</a>
                         <a class="reports" href="/lockeddoor/0000.html">> 0000000.000 000000 000000 000000</a>
-                        <a class="reports" href="/lockeddoor/0000.html">> 000000 000 000000000</a>   
+                        <a class="reports" href="/lockeddoor/0000.html">> 000000 000 000000000</a>
                         <a class="reports" href="/lockeddoor/0000.html">> 000000 00000 000000 000000000000</a>
                 </nav>
                 <nav class="notepadsnav">
                     <a class="cda" href="/lockeddoor/field.notes.html">\\ field_notes</a>
-                
+
                     <a class ="notepad" href="/lockeddoor/windows.domain.html">> windows_domain.md</a>
                         <a class ="notepad" href="/lockeddoor/windows.logs.html">> windows_logs.md</a>
                         <a class ="notepad" href="/lockeddoor/io.registry.html">> i_o_and_registry.md</a>
@@ -76,8 +76,8 @@
                         <a class ="notepad" href="/lockeddoor/linux.triage.html">> linux.triage.md</a>
                         <a class ="notepad" href="/lockeddoor/linux.os.html">> linux.os.md</a>
                         <a class ="notepad" href="/lockeddoor/email.protocol.html">> email.protocol.md</a>
-                    
-    
+
+
                 </nav>
                 <nav class="otherprojectnav">
                     <a class ="otherproject" href="/lockeddoor/osc.pilot.html
@@ -92,12 +92,40 @@
 
 
                 </nav>
-                
-            
+
+
     </div>
-    
+
     </header>
-   
+    <div id="popup" class="hidden">
+        <a class="close" href="#">X</a>
+        <pre></pre>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let popup = $("#popup");
+
+        $("nav a").on("click", e => { // when a link in a nav is clicked
+            $.get(e.target.href, (data, status) => { // make a get request to the link
+                $("#popup pre").empty(); // empty the content
+                $("#popup pre").html(data); // add new content
+                popup.removeClass("hidden"); // unhide the popup
+            });
+
+            e.preventDefault();
+            return false;
+        });
+
+        $("#popup .close").on("click", e => { // when a link in a nav is clicked
+           popup.addClass("hidden");
+
+            e.preventDefault();
+           return false;
+        });
+    </script>
+
+
     <script type="text/javascript" src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
     <script>
         const viewerConfig = {
@@ -124,6 +152,7 @@
             }, viewerConfig);
         };
     </script>
+
 
     </body>
     <footer>

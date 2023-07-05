@@ -71,7 +71,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding-left: 200px;
+        padding-left: 300px;
         padding-right: 0px;
         margin-right: 0px;
     }
@@ -81,15 +81,17 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding-left: 170px;
+        margin-left: -200px;
     }
     .reportsnav {
 
         background-color: none;
         height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 50px;
+        margin-left: -100px;
         color:rgb(53, 86, 101);
 
     }
@@ -99,20 +101,21 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        margin-left: -135px;
-        margin-top: 400px;
+        margin-left: 100px;
+        margin-top: 500px;
     }
     .pilotnav {
         background-color: none;
         height: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 50px;
+        padding-right: -400px;
 
     }
     .root {
 
-        padding-right: 120px;
+        padding-right: 200px;
         padding-left: 65px;
         color: rgb(143, 156, 159);
         text-decoration: none;
@@ -136,45 +139,48 @@
         color:rgb(53, 86, 101);
         flex-direction: column;
         text-decoration: none;
-        margin-top: -150px;
-        margin-left: -200px;
+        margin-top: -250px;
+        margin-left: 50px;
 
     }
     .reports {
 
         color:rgb(28, 44, 52);
-        padding-top: 17px;
+        padding-top: 10px;
         padding-bottom: 0px;
         text-decoration: none;
+        margin-left: 50px;
 
     }
     .resume {
 
         color:rgb(28, 44, 52);
-        padding-top: 17px;
+        padding-top: 10px;
         padding-bottom: 0px;
         text-decoration: none;
     }
     .pilot {
 
         color:rgb(28, 44, 52);
-        padding-top: 17px;
+        padding-top: 10px;
         padding-bottom: 0px;
         text-decoration: none;
-        flex-direction: column;
+
+        margin-left: -150px;
     }
     .notepad {
 
         color:rgb(28, 44, 52);
-        padding-left: -180px;
-        padding-top: 17px;
+        margin-right: -480px;
+        margin-left: 200px;
+        padding-top: 10px;
         padding-bottom: 0px;
         text-decoration: none;
     }
     .format {
 
         color:rgb(53, 86, 101);
-        padding-left: 0px;
+        padding-left: 50px;
         padding-top: 17px;
         padding-bottom: 0px;
         text-decoration: none;
@@ -184,7 +190,7 @@
         color:rgb(53, 86, 101);
         display: flex;
         flex-direction: column;
-        margin-left: -50px;
+        margin-left: -250px;
         padding-top: 17px;;
         text-decoration: none;
     }
@@ -333,22 +339,24 @@
 
     }
 
-    button {
+    .resumebutton {
         cursor: pointer;
-        width: 120px;
-        height: 40px;
-        padding: 10px;
         font-family: monospace;
         font-size: 14px;
         border-radius: 5px;
         border: 5px #ffffff;
         background-color:#000000;
         color:rgb(53, 86, 101);
-        margin-top: 30px;
+        margin-top: 20px;
+        margin-left: 150px;
+
 
 
     }
 
     .hidden {
-        color: white;
-    }
+        color: red;
+
+
+
+}
