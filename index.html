@@ -38,7 +38,7 @@
 
     <a class="root1" href="/lockeddoor/resume.html">\ trevor.achtermann</a>
    <ul class="viewresume">
-        <li><button class="resumebutton activelink" type="button" id="view-pdf-btn" onclick="previewFile()" disabled>view resume</button></li>
+        <li><button class="resumebutton activelink" type="button" id="view-resume-btn" onclick="previewFile()" disabled>view resume</button></li>
 
 
    </ul>
@@ -118,34 +118,50 @@
            return false;
         });
     </script>
+<script type="text/javascript" src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
 
-
-    <script type="text/javascript" src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
     <script>
-        const viewerConfig = {
+        const viewerConfig1 = {
             embedMode: "LIGHT_BOX"
-        };
-        document.addEventListener("adobe_dc_view_sdk.ready", function () {
-            document.getElementById("view-pdf-btn").disabled = false;
-        });
-        function previewFile()
-        {
-            var adobeDCView = new AdobeDC.View({
-
-                clientId: "6c4a7b547a204e23bdad85047d5d7f94"
-            });
-            adobeDCView.previewFile({
-                content: {
-                    location: {
-                        url: "\\lockeddoor\\image\\trevor_achtermann_resume.pdf",
-                    },
-                },
-                metaData: {
-                    fileName: "trevor_achtermann_resume"
-                }
-            }, viewerConfig);
+        };document.addEventListener("adobe_dc_view_sdk.ready", function () {
+          document.getElementById("view-pdf-btn").disabled = false;
+        });function previewFile()
+        { var adobeDCView = new AdobeDC.View ({
+        clientId: "6c4a7b547a204e23bdad85047d5d7f94"
+        }); adobeDCView.previewFile ({
+            content: {
+            location: {
+url: "\\lockeddoor\\image\\trevor_achtermann_resume.pdf",
+                      },
+                      },
+            metaData: {
+            fileName: "trevor_achtermann_resume"
+                      }
+          },viewerConfig1 );
         };
     </script>
+
+
+<script>
+    const viewerConfig2 = {
+        embedMode: "LIGHT_BOX"
+    };document.addEventListener("adobe_dc_view_sdk.ready", function () {
+      document.getElementById("view-resume-btn").disabled = false;
+    });function previewFile()
+    { var adobeDCView = new AdobeDC.View ({
+    clientId: "6c4a7b547a204e23bdad85047d5d7f94"
+    }); adobeDCView.previewFile ({
+        content: {
+        location: {
+url: "\\lockeddoor\\image\\starship.pdf",
+                  },
+                  },
+        metaData: {
+        fileName: "trevor_achtermann_resume"
+                  }
+      },viewerConfig2 );
+    };
+</script>
 
 
     </body>
