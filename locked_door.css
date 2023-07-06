@@ -247,13 +247,20 @@ main {
 body {
     color: white;
 }
-.pdfinvert {
+div {
 
 
 
     filter:invert(10);
 
 
+}
+
+.close {
+    width: 100vw;
+    height: 10vh;
+    position: static;
+    display: flex;
 }
 .pdf {
 
