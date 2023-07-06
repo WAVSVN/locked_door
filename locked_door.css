@@ -256,12 +256,7 @@ div {
 
 }
 
-.close {
-    width: 100vw;
-    height: 10vh;
-    position: static;
-    display: flex;
-}
+
 .pdf {
 
     filter: contrast(1.0);
@@ -383,8 +378,16 @@ footer {
 
 .hidden {
     color: red;
-}
+    position:absolute;
 
+}
+.close {
+    width: 100vw;
+    height: 100vh;
+
+
+
+}
 /* POPUP */
 
 #popup {
@@ -406,7 +409,7 @@ footer {
 }
 
 #popup .close {
-    font-size: 24px;
+    font-size: 200px;
 }
 
 #popup pre {
