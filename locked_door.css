@@ -5,6 +5,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 
@@ -40,26 +41,30 @@ a {
     color:rgb(53, 86, 101);
 }
 .lockeddoor {
+
+    display: flex;
+    flex: shrink;
     color: rgb(255, 255, 255);
-    padding-top: 25px;
     margin-left: -25px;
     font-size: 20px;
     background-color: #000000;
     letter-spacing: 2px;
+    margin-top: 30px;
+
 }
 
 body {
     background-color: #000000;
+
 }
 .rootnav {
 
     background-color: none;
     display: flex;
     flex-direction: column;
-    margin-top: -390px;
     margin-left: 200px;
-    padding-top: 70px;
     color:rgb(53, 86, 101);
+    margin-top: -300px;
 
 
 }
@@ -70,7 +75,6 @@ body {
     font-size: 14px;
     text-decoration: none;
     font-family: monospace;
-    margin-top: -90px;
     padding-left: 90px;
     color:rgb(53, 86, 101);
 
@@ -81,18 +85,9 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 300px;
-    padding-right: 0px;
-    margin-right: 0px;
-}
-.cdanav {
 
-    background-color: none;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-left: -200px;
 }
+
 .reportsnav {
 
     background-color: none;
@@ -100,7 +95,6 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 145px;
     margin-left: -100px;
     color:rgb(53, 86, 101);
 
@@ -112,7 +106,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 270px;
-    margin-top: 300px;
+
 }
 .pilotnav {
     background-color: none;
@@ -127,39 +121,36 @@ body {
 
 
     padding-left: 65px;
-    padding-top: 60px;
+    padding-top: 10vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
     font-size: 14px;
     font-family: monospace;
-    margin-bottom: -170px;
 
 }
 .root2 {
 
 
     padding-left: 65px;
-    padding-top: 30px;
+    padding-top: 7vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
     font-size: 14px;
     font-family: monospace;
-    margin-top: 50px;
     position: static;
 }
 .root3 {
 
 
     padding-left: 65px;
-    padding-top: 30px;
+    padding-top: 18vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
     font-size: 14px;
     font-family: monospace;
-    margin-top: 200px;
     position: static;
 }
 li>:hover {
@@ -177,12 +168,15 @@ li>:hover {
     color:rgb(53, 86, 101);
     flex-direction: column;
     text-decoration: none;
-    margin-top: -240px;
     margin-left: 50px;
+    margin-top: 30px;
 }
+
 .reset {
     display: flex;
-    margin-top: -135px;
+    flex-direction: column;
+    align-self: flex-start;
+    margin-top: -145px;
 }
 
 
@@ -190,7 +184,6 @@ li>:hover {
 
     color:rgb(28, 44, 52);
     padding-top: 10px;
-    padding-bottom: 0px;
     text-decoration: none;
     margin-left: 200px;
     width: 300px;
@@ -200,14 +193,12 @@ li>:hover {
 
     color:rgb(28, 44, 52);
     padding-top: 10px;
-    padding-bottom: 0px;
     text-decoration: none;
 }
 
 .reportstitle {
 
     margin-left: 100px;
-    margin-top: -300px;
     width: 100%;
 }
 .pilot {
@@ -222,27 +213,19 @@ li>:hover {
     color:rgb(28, 44, 52);
     margin-right: -480px;
     margin-left: 170px;
-    padding-top: -10px;
-    padding-bottom: 0px;
     text-decoration: none;
 }
-.format {
 
-    color:rgb(53, 86, 101);
-    padding-left: 50px;
-    padding-top: 17px;
-    padding-bottom: 0px;
-    text-decoration: none;
-}
 .otherproject {
     background-color: none;
     color:rgb(53, 86, 101);
     display: flex;
     flex-direction: column;
     margin-left: 330px;
-    margin-top: -220px;
-    padding-top: 17px;;
+    padding-top: 10px;;
     text-decoration: none;
+    margin-top: -200px;
+
 }
 div>p {
 
@@ -273,11 +256,7 @@ body {
     filter:contrast(300%);
     filter:invert(10);
     overflow: hidden;
-    margin-top: -930px;
-    margin-right: -30px;
-    scale: 100%;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+
 
 }
 .pdf {
@@ -289,11 +268,9 @@ body {
     height: 100vh;
     width: 36vw;
     overflow: hidden;
-    margin-top: -920px;
     margin-right: -30px;
     scale: 100%;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+
 
 }
 .md {
@@ -304,11 +281,9 @@ body {
     height: 100vh;
     width: 36vw;
     overflow: hidden;
-    margin-top: -820px;
     margin-right: -30px;
     scale: 100vh;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+
 
 
 }
@@ -321,21 +296,19 @@ body {
     height: 100vh;
     width: 36vw;
     overflow: hidden;
-    margin-top: -70px;
     margin-right: 90px;
     scale: 100vh;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+
 
 }
 .doorgif {
 
     width:7%;
     height:100%;
-    scale: 180%;
+    scale: 150%;
     overflow: hidden;
-    margin-top: -10px;
-    margin-left: -30px;
+    margin-top: -20px;
+    margin-left: -40px;
 
 }
 
@@ -352,9 +325,7 @@ body {
     color: rgb(181, 229, 248);
 
 }
-iframe {
-    overflow: hidden;
-}
+
 section {
 
     background-color: black;
@@ -398,7 +369,7 @@ footer {
     background-color:#000000;
     color:rgb(53, 86, 101);
     display: flex;
-
+    flex-direction: column;
     width: 100%;
 }
 
