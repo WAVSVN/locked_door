@@ -32,14 +32,20 @@
 
 header {
     background-color: #000000;
+
     }
 
+a {
+    text-decoration: none;
+    color:rgb(53, 86, 101);
+}
 .lockeddoor {
     color: rgb(255, 255, 255);
     padding-top: 25px;
-    margin-left: -45px;
+    margin-left: -25px;
     font-size: 20px;
     background-color: #000000;
+    letter-spacing: 2px;
 }
 
 body {
@@ -49,7 +55,10 @@ body {
 
     background-color: none;
     display: flex;
-    margin-left: 80px;
+    flex-direction: column;
+    margin-top: -390px;
+    margin-left: 200px;
+    padding-top: 70px;
     color:rgb(53, 86, 101);
 
 
@@ -91,7 +100,7 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 145px;
     margin-left: -100px;
     color:rgb(53, 86, 101);
 
@@ -102,35 +111,63 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
-    margin-top: 500px;
+    margin-left: 270px;
+    margin-top: 300px;
 }
 .pilotnav {
     background-color: none;
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    padding-right: -400px;
+
+
 
 }
-.root {
+.root1 {
 
-    padding-right: 200px;
+
     padding-left: 65px;
+    padding-top: 60px;
+
     color: rgb(143, 156, 159);
     text-decoration: none;
     font-size: 14px;
     font-family: monospace;
-    margin-top: -127px;
+    margin-bottom: -170px;
+
+}
+.root2 {
+
+
+    padding-left: 65px;
+    padding-top: 30px;
+
+    color: rgb(143, 156, 159);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: monospace;
+    margin-top: 50px;
     position: static;
 }
-nav>:hover {
+.root3 {
+
+
+    padding-left: 65px;
+    padding-top: 30px;
+
+    color: rgb(143, 156, 159);
+    text-decoration: none;
+    font-size: 14px;
+    font-family: monospace;
+    margin-top: 200px;
+    position: static;
+}
+li>:hover {
 
     color: rgb(181, 229, 248);
     border: 2px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 13.5px;
 
 
 }
@@ -140,17 +177,23 @@ nav>:hover {
     color:rgb(53, 86, 101);
     flex-direction: column;
     text-decoration: none;
-    margin-top: -250px;
+    margin-top: -240px;
     margin-left: 50px;
-
 }
+.reset {
+    display: flex;
+    margin-top: -135px;
+}
+
+
 .reports {
 
     color:rgb(28, 44, 52);
     padding-top: 10px;
     padding-bottom: 0px;
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 200px;
+    width: 300px;
 
 }
 .resume {
@@ -160,21 +203,26 @@ nav>:hover {
     padding-bottom: 0px;
     text-decoration: none;
 }
+
+.reportstitle {
+
+    margin-left: 100px;
+    margin-top: -300px;
+    width: 100%;
+}
 .pilot {
 
     color:rgb(28, 44, 52);
     padding-top: 10px;
-    padding-bottom: 0px;
     text-decoration: none;
-
-    margin-left: -150px;
+    margin-left: 440px;
 }
 .notepad {
 
     color:rgb(28, 44, 52);
     margin-right: -480px;
-    margin-left: 200px;
-    padding-top: 10px;
+    margin-left: 170px;
+    padding-top: -10px;
     padding-bottom: 0px;
     text-decoration: none;
 }
@@ -191,7 +239,8 @@ nav>:hover {
     color:rgb(53, 86, 101);
     display: flex;
     flex-direction: column;
-    margin-left: -250px;
+    margin-left: 330px;
+    margin-top: -220px;
     padding-top: 17px;;
     text-decoration: none;
 }
@@ -283,11 +332,10 @@ body {
 
     width:7%;
     height:100%;
-    scale: 100%;
+    scale: 180%;
     overflow: hidden;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: 10px;
+    margin-top: -10px;
+    margin-left: -30px;
 
 }
 
@@ -323,6 +371,7 @@ footer {
     text-decoration: none;
     height: 10px;
 
+
 }
 .activelink {
     color: rgb(181, 229, 248);
@@ -348,8 +397,13 @@ footer {
     border: 5px #ffffff;
     background-color:#000000;
     color:rgb(53, 86, 101);
-    margin-top: 20px;
-    margin-left: 150px;
+    display: flex;
+
+    width: 100%;
+}
+
+.viewresume {
+    margin-left: 230px;
 }
 
 .hidden {
@@ -387,3 +441,76 @@ footer {
     overflow-y: scroll;
     margin-top: 12px;
 }
+
+
+/*/////////////////////*/
+/*       tree          */
+/*/////////////////////*/
+
+.tree {
+    position: relative;
+    background: rgb(0, 0, 0);
+    margin-top: 20px;
+    padding: 30px;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+  }
+  .tree span {
+    font-size: 13px;
+    font-style: italic;
+    letter-spacing: 0.4px;
+    color: #a8a8a8;
+  }
+  .tree .fa-folder-open, .tree .fa-folder {
+    color: #007bff;
+  }
+  .tree .fa-html5 {
+    color: #f21f10;
+  }
+  .tree ul {
+    padding-left: 5px;
+    list-style: none;
+  }
+  .tree ul li {
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .tree ul li:before {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    margin: auto;
+    content: "";
+    background-color: #666;
+    color: white;
+  }
+  .tree ul li:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background-color: #666;
+    color: white;
+  }
+  .tree ul li:last-child:after {
+    height: 15px;
+  }
+  .tree ul a {
+    cursor: pointer;
+  }
+  .tree ul a:hover {
+    text-decoration: none;
+  }
