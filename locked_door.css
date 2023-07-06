@@ -252,7 +252,7 @@ div {
 
 
     filter:invert(10);
-
+    overflow:hidden;
 
 }
 
@@ -382,13 +382,15 @@ footer {
 
 }
 .close {
-    width: 100vw;
-    height: 100vh;
+
 
 
 
 }
-/* POPUP */
+
+/*/////////////////////*/
+/*       popup         */
+/*/////////////////////*/
 
 #popup {
     display: flex;
@@ -493,7 +495,3 @@ footer {
     text-decoration: none;
   }
 
-  .invertpdf {
-
-    filter:invert(10);
-  }
