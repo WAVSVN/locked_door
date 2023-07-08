@@ -381,9 +381,17 @@ footer {
     position:absolute;
 
 }
-.close {
+.close1 {
 
 
+
+
+}
+
+close2 {
+
+display: flex;
+flex: 2;
 
 
 }
@@ -394,6 +402,7 @@ footer {
 
 #popup {
     display: flex;
+    flex: 1;
     align-items: flex-end;
     flex-direction: column;
     z-index: 999;

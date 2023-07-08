@@ -92,7 +92,8 @@
 
 </header>
     <main id="popup" class="hidden">
-        <a class="close" href="#"></a>
+        <a class="close1" href="#">x</a>
+        <a class="close2" href="#"></a>
         <pre></pre>
     </main>
 
@@ -111,7 +112,13 @@
             return false;
         });
 
-        $("#popup .close").on("click", e => { // when a link in a nav is clicked
+        $("#popup .close1").on("click", e => { // when a link in a nav is clicked
+           popup.addClass("hidden");
+
+            e.preventDefault();
+           return false;
+        });
+        $("#popup .clos2").on("click", e => { // when a link in a nav is clicked
            popup.addClass("hidden");
 
             e.preventDefault();
