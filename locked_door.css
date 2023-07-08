@@ -369,12 +369,11 @@ footer {
     width: 100%;
     text-decoration: none;
     color:rgb(215, 145, 255);
-
+    margin-left: 230px;
 
 }
 
 .viewresume {
-    margin-left: 230px;
 }
 
 .hidden {
