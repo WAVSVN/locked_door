@@ -36,10 +36,16 @@ header {
 
     }
 
-a {
-    text-decoration: none;
-    color:rgb(215, 145, 255);
-}
+    a {
+        text-decoration: none;
+        color:rgb(101, 146, 150);
+    }
+
+    li button {
+        text-decoration: none;
+        color:rgb(101, 146, 150);
+    }
+
 .lockeddoor {
 
     display: flex;
@@ -177,6 +183,7 @@ li>:hover {
     flex-direction: column;
     align-self: flex-start;
     margin-top: -145px;
+    color: white;
 }
 
 
@@ -368,7 +375,6 @@ footer {
     flex-direction: column;
     width: 100%;
     text-decoration: none;
-    color:rgb(215, 145, 255);
     margin-left: 230px;
 
 }
@@ -378,7 +384,6 @@ footer {
 
 .hidden {
     color: red;
-    position:absolute;
 
 }
 .close1 {
@@ -389,10 +394,12 @@ font-size: 30px;
 
 }
 
-close2 {
+.close2 {
 
-display: flex;
-flex: 2;
+width: 50vw;
+flex-direction: flex-start;
+border: #f21f10;
+
 
 
 }
@@ -403,11 +410,10 @@ flex: 2;
 
 #popup {
     display: flex;
-    flex: 1;
     align-items: flex-end;
     flex-direction: column;
     z-index: 999;
-    position: fixed;
+    position: absolute;
     height: 100vh;
     width: 100%;
     top: 0;
@@ -473,28 +479,7 @@ flex: 2;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .tree ul li:before {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 10px;
-    height: 1px;
-    margin: auto;
-    content: "";
-    background-color: #666;
-    color: white;
-  }
-  .tree ul li:after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    content: "";
-    background-color: #666;
-    color: white;
-  }
+
   .tree ul li:last-child:after {
     height: 15px;
   }
@@ -539,3 +524,29 @@ flex: 2;
   .tree ul li button:last-child:after {
     height: 15px;
   }
+
+
+
+.tree ul li:before {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 10px;
+    height: 1px;
+    margin: auto;
+    content: "";
+    background-color: #b4b4b4;
+    color: white;
+  }
+  .tree ul li:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background-color: #b4b4b4;
+    color: white;
+  }
+
