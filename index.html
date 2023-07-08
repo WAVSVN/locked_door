@@ -38,7 +38,7 @@
 
     <a class="root1">\ trevor.achtermann</a>
    <ul class="viewresume">
-        <li><button class="resumebutton" type="button" id="view-pdf-btn" onclick="previewFile('\\lockeddoor\\image\\trevor_achtermann_resume.pdf')" disabled>view resume</button></li>
+        <li><button class="resumebutton" type="button" id="pdf" onclick="previewFile('\\lockeddoor\\image\\starship.pdf')" disabled>view resume</button></li>
 
 
    </ul>
@@ -53,7 +53,7 @@
     <li class ="otherproject"><a href="markdown/osc.pilot.md">\\ osc/pilot </a></li>
 </ul>
 <ul class="pilotnav">
-    <li><button class="resumebutton" type="button" id="view-pdf-btn" onclick="previewFile('\\lockeddoor\\image\\osc.pilot.pdf')" disabled>osc.pilot.pdf</button></li>
+    <li><button class="resumebutton" type="button" id="pdf" onclick="previewFile('\\lockeddoor\\image\\starship.pdf')" disabled>osc.pilot.plt</button></li>
     <li class="pilot"><a href="/lockeddoor/serumx69.html">> serum x69.plt</a></li>
     <li class="pilot"><a href="/lockeddoor/fkfx.html">> fkfx_influx.plt</a></li>
     <li class="pilot"><a href="/lockeddoor/punchbox.html">> punchbox.plt</a></li>
@@ -127,12 +127,12 @@
     </script>
 <div class="PageCanvas">
  <script type="text/javascript" src="https://acrobatservices.adobe.com/view-sdk/viewer.js"></script>
- <script class="pdfinvert">
+ <script>
      const viewerConfig = {
          embedMode: "LIGHT_BOX"
      };
      document.addEventListener("adobe_dc_view_sdk.ready", function () {
-         document.getElementById("view-pdf-btn").disabled = false;
+         document.getElementById("pdf").disabled = false;
      });
      function previewFile(file)
      {
@@ -148,10 +148,13 @@
              },
              metaData: {
                  fileName: "trevor_achtermann_resume"
+                ,fileName: "starship"
              }
+
          }, viewerConfig);
      };
  </script>
+
 </div>
 
 
