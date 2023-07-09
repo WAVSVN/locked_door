@@ -103,7 +103,7 @@
     <script>
         let popup = $("#popup");
 
-        $("header ul li a").on("click", e => { // when a link in a nav is clicked
+        $(".notepad a").on("click", e => { // when a link in a nav is clicked
             $.get(e.target.href, (data, status) => { // make a get request to the link
                 $("#popup pre").empty(); // empty the content
                 $("#popup pre").html(data); // add new content
