@@ -214,6 +214,13 @@ li>:hover {
     text-decoration: none;
     margin-left: 440px;
 }
+
+.adobebutton {
+
+    padding-top: 10px;
+    text-decoration: none;
+    margin-left: 440px;
+}
 .notepad {
 
     color:rgb(28, 44, 52);
@@ -378,6 +385,9 @@ footer {
 
 }
 
+.adobebutton:hover {
+    color: yellow;
+}
 .viewresume {
     display: flex;
     flex-direction: column;
@@ -500,7 +510,7 @@ border: #f21f10;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .tree ul li button:before {
+  .tree ul li a:before {
     position: absolute;
     top: 15px;
     left: 0;
@@ -511,7 +521,7 @@ border: #f21f10;
     background-color: #666;
     color: white;
   }
-  .tree ul li button:after {
+  .tree ul li a:after {
     position: absolute;
     top: 0;
     bottom: 0;
