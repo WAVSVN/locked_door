@@ -112,13 +112,12 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 270px;
+    margin-left: 50px;
 
 }
 .pilotnav {
     background-color: none;
-    height: 100%;
-
+margin-left: 230px;
 
 
 
@@ -151,7 +150,7 @@ body {
 
 
     padding-left: 65px;
-    padding-top: 18vh;
+    padding-top: 7vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
@@ -173,7 +172,7 @@ li>:hover {
     color:rgb(53, 86, 101);
     flex-direction: column;
     text-decoration: none;
-    margin-left: 50px;
+    margin-left: 200px;
     margin-top: 30px;
 }
 
@@ -195,12 +194,7 @@ li>:hover {
     width: 300px;
 
 }
-.resume {
 
-    color:rgb(28, 44, 52);
-    padding-top: 10px;
-    text-decoration: none;
-}
 
 .reportstitle {
 
@@ -219,12 +213,12 @@ li>:hover {
 
     padding-top: 10px;
     text-decoration: none;
-    margin-left: 440px;
+
 }
 .notepad {
 
     color:rgb(28, 44, 52);
-    margin-right: -480px;
+
     margin-left: 170px;
     text-decoration: none;
 }
@@ -234,10 +228,10 @@ li>:hover {
     color:rgb(53, 86, 101);
     display: flex;
     flex-direction: column;
-    margin-left: 330px;
+
     padding-top: 10px;;
     text-decoration: none;
-    margin-top: -200px;
+
 
 }
 div>p {
@@ -380,17 +374,13 @@ footer {
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    margin-left: 450px;
 
 }
 
 .adobebutton:hover {
     color: rgb(181, 229, 248);
 }
-.viewresume {
-    display: flex;
-    flex-direction: column;
-}
+
 
 .hidden {
     color: red;
@@ -412,6 +402,11 @@ border: #f21f10;
 
 
 
+}
+
+.viewresume {
+
+    margin-left: 225px;
 }
 
 /*/////////////////////*/
@@ -537,7 +532,7 @@ border: #f21f10;
 
 
 
-.tree ul li:before {
+.tree ul li a:before {
     position: absolute;
     top: 15px;
     left: 0;
@@ -548,7 +543,7 @@ border: #f21f10;
     background-color: #b4b4b4;
     color: white;
   }
-  .tree ul li:after {
+  .tree ul li a:after {
     position: absolute;
     top: 0;
     bottom: 0;
