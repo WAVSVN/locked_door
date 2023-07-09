@@ -54,8 +54,8 @@
     <li class ="otherproject"><a href="markdown/osc.pilot.md">\\ osc/pilot </a></li>
 </ul>
 <ul class="pilotnav">
-    <li><a class="adobebutton reinvert" type="button" id="pdf" onclick="previewFile('\\lockeddoor\\image\\starship0.2.pdf')" disabled>starship.plt</a></li>
-    <li><a class="adobebutton reinvert" type="button" id="pdf" onclick="previewFile('\\lockeddoor\\image\\serum.pdf')" disabled>serum.plt</a></li>
+    <a class="adobebutton reinvert" type="button" id="pdf" onclick="previewFile('\\lockeddoor\\image\\starship0.2.pdf')" disabled>starship.plt</a>
+    <a class="adobebutton reinvert" type="button" id="pdf" onclick="previewFile('\\lockeddoor\\image\\serum.pdf')" disabled>serum.plt</a>
     <li class="pilot"><a href="/lockeddoor/fkfx.html">> fkfx_influx.plt</a></li>
     <li class="pilot"><a href="/lockeddoor/punchbox.html">> punchbox.plt</a></li>
     <li class="pilot"><a href="/lockeddoor/live11.html">> ableton.plt</a></li>
@@ -103,7 +103,7 @@
     <script>
         let popup = $("#popup");
 
-        $(".notepad").on("click", e => { // when a link in a nav is clicked
+        $(".notepad").on("click", e => { // when a link is clicked
             $.get(e.target.href, (data, status) => { // make a get request to the link
                 $("#popup pre").empty(); // empty the content
                 $("#popup pre").html(data); // add new content
