@@ -101,9 +101,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: -100px;
+    margin-left: 100px;
     color:rgb(53, 86, 101);
-    margin-top: -100px;
+    margin-top: -300px;
 
 }
 .notepadsnav {
@@ -198,8 +198,8 @@ li>:hover {
 
 .reportstitle {
 
-    margin-left: 100px;
-    width: 100%;
+    margin-left: -100px;
+    width: 200px;
 }
 .pilot {
 
@@ -342,9 +342,10 @@ footer {
     background-color: #000000;
     color: rgb(255, 255, 255);
     font-family: monospace;
-    padding: 50px;
     text-decoration: none;
     height: 10px;
+margin-left: 20px;
+    position: absolute;
 
 
 }
