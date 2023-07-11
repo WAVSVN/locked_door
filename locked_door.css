@@ -458,7 +458,7 @@ border: #f21f10;
     flex-direction: column;
     z-index: 999;
     position: absolute;
-    height: 100%;
+    height: 200vh;
     width: 100%;
     top: 0;
     right: 0;
