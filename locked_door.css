@@ -142,13 +142,13 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 15vw;
+    margin-left: 7vw;
 
 }
 .pilotnav {
     background-color: none;
     width:fit-content;
-    margin-left: 12vw;
+    margin-left: 7vw;
 
 
 
@@ -224,7 +224,7 @@ li>:hover {
 
     color:rgb(53, 86, 101);
     text-decoration: none;
-    margin-left: 12vw;
+    margin-left: 2vw;
     margin-top: 30px;
 }
 
@@ -445,7 +445,7 @@ border: #f21f10;
 
 .viewresume {
 
-    margin-left: 225px;
+    margin-left: 7vw;
 }
 
 /*/////////////////////*/
@@ -458,7 +458,7 @@ border: #f21f10;
     flex-direction: column;
     z-index: 999;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     top: 0;
     right: 0;
@@ -477,8 +477,6 @@ border: #f21f10;
 #popup pre {
     width: 70%;
     height: fit-content;
-    word-wrap: break-word;
-    white-space: pre-wrap;
     overflow-y: scroll;
     margin-top: 12px;
 }
