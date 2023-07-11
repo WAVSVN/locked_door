@@ -27,12 +27,34 @@
 
     display: none;
 }
+
+
+
+@media screen and (max-width: 600px) {
+  /* CSS rules here */
+
+  header
+
+    color: red;
+    background-color: #007bff;
+  }
+
+
+
+
+
+
+
+
+
 /*/////////////////////*/
 /*       HEADER        */
 /*/////////////////////*/
 
 header {
     background-color: #000000;
+    display: flex;
+    flex-direction: column;
 
     }
 
@@ -48,15 +70,32 @@ header {
 
 .lockeddoor {
 
-    display: flex;
-    flex: shrink;
+
     color: rgb(255, 255, 255);
-    margin-left: -25px;
     font-size: 20px;
     background-color: #000000;
     letter-spacing: 2px;
     margin-top: 30px;
 
+}
+
+.doorgif {
+
+  margin-top: -10px;
+  margin-left: -40px;
+  scale: 130%;
+  position: absolute;
+
+
+}
+
+.reset {
+
+  margin-top: -30px;
+  margin-left: 15px;
+  padding: none;
+  color: white;
+  position: absolute;
 }
 
 body {
@@ -68,23 +107,14 @@ body {
     background-color: none;
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
     color:rgb(53, 86, 101);
-    margin-top: -300px;
+    margin-top: 70px;
+    height: fit-content;
+
 
 
 }
-.othernav {
 
-    display: flex;
-    flex-direction: row;
-    font-size: 14px;
-    text-decoration: none;
-    font-family: monospace;
-    padding-left: 90px;
-    color:rgb(53, 86, 101);
-
-}
 .resumenav {
 
     background-color: none;
@@ -98,12 +128,12 @@ body {
 
     background-color: none;
     height: 100%;
-    width: 300px;
+    width: fit-content;
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
+
     color:rgb(53, 86, 101);
-    margin-top: -154px;
+
 
 }
 .notepadsnav {
@@ -112,13 +142,13 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
+    margin-left: 15vw;
 
 }
 .pilotnav {
     background-color: none;
-margin-left: 230px;
-width: 300px;
+    width:fit-content;
+    margin-left: 12vw;
 
 
 
@@ -144,8 +174,8 @@ width: 300px;
 .root1 {
 
 
-    padding-left: 65px;
-    padding-top: 10vh;
+
+    padding-top: 7vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
@@ -156,14 +186,14 @@ width: 300px;
 .root2 {
 
 
-    padding-left: 65px;
+
     padding-top: 3vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
     font-size: 14px;
     font-family: monospace;
-    position: static;
+
 }
 
 .root2:hover {
@@ -172,14 +202,14 @@ width: 300px;
 .root3 {
 
 
-    padding-left: 65px;
+
     padding-top: 2vh;
 
     color: rgb(143, 156, 159);
     text-decoration: none;
     font-size: 14px;
     font-family: monospace;
-    position: static;
+
 }
 li>:hover {
 
@@ -193,19 +223,12 @@ li>:hover {
 .cda {
 
     color:rgb(53, 86, 101);
-    flex-direction: column;
     text-decoration: none;
-    margin-left: 200px;
+    margin-left: 12vw;
     margin-top: 30px;
 }
 
-.reset {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-start;
-    margin-top: -145px;
-    color: white;
-}
+
 
 
 .reports {
@@ -214,15 +237,15 @@ li>:hover {
     padding-top: 10px;
     text-decoration: none;
     margin-left: 200px;
-    width: 300px;
+    width: fit-content;
 
 }
 
 
 .reportstitle {
 
-    margin-left: -100px;
-    width: 200px;
+
+    width: fit-content;
 }
 .pilot {
 
@@ -243,7 +266,7 @@ li>:hover {
 
     color:rgb(28, 44, 52);
 
-    margin-left: 170px;
+
     text-decoration: none;
 }
 
@@ -329,16 +352,7 @@ div {
 
 
 }
-.doorgif {
 
-    width:7%;
-    height:100%;
-    scale: 150%;
-    overflow: hidden;
-    margin-top: -20px;
-    margin-left: -40px;
-
-}
 
 .dllink {
     color: rgb(143, 156, 159);
@@ -461,7 +475,8 @@ border: #f21f10;
 }
 
 #popup pre {
-    width: 50%;
+    width: 70%;
+    height: fit-content;
     word-wrap: break-word;
     white-space: pre-wrap;
     overflow-y: scroll;
@@ -485,7 +500,7 @@ border: #f21f10;
     color: #212529;
   }
   .tree span {
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic;
     letter-spacing: 0.4px;
     color: #a8a8a8;
@@ -596,7 +611,7 @@ border: #f21f10;
     color: #212529;
   }
   .tree span {
-    font-size: 13px;
+    font-size: 14px;
     font-style: italic;
     letter-spacing: 0.4px;
     color: #a8a8a8;
