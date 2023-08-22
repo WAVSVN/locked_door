@@ -4,10 +4,11 @@
 \> play                \ 1 \ 2
 \> cue                 \ 1 \ 3
 \> start_of_track      \ 1 \ 4
-\> tempo               \ 1 \ 5
+\> tempo               \ 5 \ 26
+\> tempo range
 \> gain                \ 1 \ 6
 \> master              \ 1 \ 7
-\> sync                \ 1 \ 8 
+\> sync                \ 1 \ 8
 \> jog >               \ 1 \ 9
 \> jog <               \ 1 \ 10
 \> slip                \ 1 \ 11
@@ -24,19 +25,19 @@
 \> loop16              \ 1 \ 22
 \> hotcue1             \ 1 \ 23
 \> hotcue2             \ 1 \ 24
-\> hotcue3             \ 1 \ 25 
+\> hotcue3             \ 1 \ 25
 \> hotcue4             \ 1 \ 26
 \> hotcue5             \ 1 \ 27
-\> hotcue6             \ 1 \ 28             
+\> hotcue6             \ 1 \ 28
 \> hotcue7             \ 1 \ 29
 \> del_hotcue1         \ 1 \ 30
 \> del_hotcue2         \ 1 \ 31
 \> del_hotcue3         \ 1 \ 32
 \> del_hotcue4         \ 1 \ 33
 \> del_hotcue5         \ 1 \ 34
-\> del_hotcue6         \ 1 \ 35             
+\> del_hotcue6         \ 1 \ 35
 \> del_hotcue7         \ 1 \ 36
-\> jog_more            \ 1 \ 37                     
+\> jog_more            \ 1 \ 37
 \> jog_less            \ 1 \ 38
 
 
@@ -47,10 +48,11 @@
 \> play                \ 2 \ 2
 \> cue                 \ 2 \ 3
 \> start_of_track      \ 2 \ 4
-\> tempo               \ 2 \ 5
+\> tempo               \ 6 \ 27
+\> tempo range         \ 2 \ 40
 \> gain                \ 2 \ 6
 \> master              \ 2 \ 7
-\> sync                \ 2 \ 8 
+\> sync                \ 2 \ 8
 \> jog >               \ 2 \ 9
 \> jog <               \ 2 \ 10
 \> slip                \ 2 \ 11
@@ -70,16 +72,16 @@
 \> hotcue3             \ 2 \ 25
 \> hotcue4             \ 2 \ 26
 \> hotcue5             \ 2 \ 27
-\> hotcue6             \ 2 \ 28             
+\> hotcue6             \ 2 \ 28
 \> hotcue7             \ 2 \ 29
 \> del_hotcue1         \ 2 \ 30
 \> del_hotcue2         \ 2 \ 31
 \> del_hotcue3         \ 2 \ 32
 \> del_hotcue4         \ 2 \ 33
 \> del_hotcue5         \ 2 \ 34
-\> del_hotcue6         \ 2 \ 35             
+\> del_hotcue6         \ 2 \ 35
 \> del_hotcue7         \ 2 \ 36
-\> jog_more            \ 2 \ 37                     
+\> jog_more            \ 2 \ 37
 \> jog_less            \ 2 \ 38
 
 
@@ -90,10 +92,11 @@
 \> play                \ 3 \ 2
 \> cue                 \ 3 \ 3
 \> start_of_track      \ 3 \ 4
-\> tempo               \ 3 \ 5
+\> tempo               \ 7 \ 28
+\> tempo range
 \> gain                \ 3 \ 6
 \> master              \ 3 \ 7
-\> sync                \ 3 \ 8 
+\> sync                \ 3 \ 8
 \> jog >               \ 3 \ 9
 \> jog <               \ 3 \ 10
 \> slip                \ 3 \ 11
@@ -113,16 +116,16 @@
 \> hotcue3             \ 3 \ 25
 \> hotcue4             \ 3 \ 26
 \> hotcue5             \ 3 \ 27
-\> hotcue6             \ 3 \ 28             
+\> hotcue6             \ 3 \ 28
 \> hotcue7             \ 3 \ 29
 \> del_hotcue1         \ 3 \ 30
 \> del_hotcue2         \ 3 \ 31
 \> del_hotcue3         \ 3 \ 32
 \> del_hotcue4         \ 3 \ 33
 \> del_hotcue5         \ 3 \ 34
-\> del_hotcue6         \ 3 \ 35             
+\> del_hotcue6         \ 3 \ 35
 \> del_hotcue7         \ 3 \ 36
-\> jog_more            \ 3 \ 37                     
+\> jog_more            \ 3 \ 37
 \> jog_less            \ 3 \ 38
 
 
@@ -149,8 +152,8 @@
 \> fx_2_last           \ 4 \ 18
 \> fx_2_half           \ 4 \ 19
 \> fx_2_double         \ 4 \ 20
-\> fx_2_active         \ 4 \ 21 
+\> fx_2_active         \ 4 \ 21
 \> sortBPM             \ 4 \ 22
 \> sortKEY             \ 4 \ 23
 \> sortARTIST          \ 4 \ 24
-\> sortTRACK           \ 4 \ 25 
+\> sortTRACK           \ 4 \ 25
