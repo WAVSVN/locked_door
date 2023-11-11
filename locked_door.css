@@ -162,6 +162,24 @@ body {
   color:rgb(155, 183, 196);
 
 }
+
+.dlmusic {
+
+
+
+
+  background-color: #000000;
+
+  color:rgb(53, 86, 101);
+  border: none;
+
+}
+
+.dlmusic:hover {
+  color:rgb(155, 183, 196);
+
+}
+
 .root1 {
 
 
