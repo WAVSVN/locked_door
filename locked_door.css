@@ -166,8 +166,9 @@ body {
 .dlmusic {
 
 
-margin-top: 100px;
-
+margin-top: 20px;
+margin-bottom: 30px;;
+margin-left: 10px;
   background-color: #000000;
 
   color:rgb(53, 86, 101);
@@ -712,3 +713,69 @@ border: #f21f10;
     background-color: #b4b4b4;
     color: white;
   }
+
+  audio {
+
+
+
+    color: red;
+
+  }
+
+  .musics {
+    margin-top: 150px;
+  }
+
+  audio::-webkit-media-controls-play-button{
+    color:white;
+  }
+
+
+
+
+
+
+
+  .aliasing::-webkit-media-controls-panel {
+
+    background-color: #007bff;
+    background: url(image/bluescreen.png);
+    background-position: absolute;
+    color: #ffffff;
+background-size: cover;
+  }
+
+  .premaster::-webkit-media-controls-panel {
+
+    background-color: #007bff;
+    background: url(image/premaster.png);
+    background-position: absolute;
+    color: #ffffff;
+background-size: cover;
+  }
+
+
+
+
+
+
+
+
+
+  audio::-webkit-media-controls-timeline {
+    color: #ff0000;
+  }
+
+  audio::-webkit-media-controls-current-time-display {
+    color:white;
+  }
+
+audio::-webkit-media-controls-time-remaining-display {
+    color:white;
+}
+
+.title {
+  color:white;
+  font-size: 17px;
+  padding:10px;
+}
