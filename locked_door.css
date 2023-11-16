@@ -392,8 +392,8 @@ footer {
     font-family: monospace;
     text-decoration: none;
     height: 10px;
-margin-left: 20px;
-    position: absolute;
+padding: 10px;
+margin-top: 20px;
 
 
 }
@@ -743,6 +743,7 @@ border: #f21f10;
     background-position: absolute;
     color: #ffffff;
 background-size: cover;
+width: 4000px;
   }
 
   .premaster::-webkit-media-controls-panel {
@@ -869,4 +870,17 @@ audio::-webkit-media-controls-time-remaining-display {
   color:white;
   font-size: 17px;
   padding:10px;
+}
+
+.title2 {
+  color:rgb(0, 0, 0);
+  font-size: 17px;
+  padding:10px;
+}
+
+
+.hero {
+  font-size: 30px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
 }
