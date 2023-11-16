@@ -30,7 +30,7 @@
         </pre></a>
 <div class="musics"></div>
 
-
+<section></section>
 
 
 <p class="hero">Bluescreen</p>
@@ -151,7 +151,7 @@
 
 
         <pre class="title"> signal in the noise </pre>
-        <audio id='13' class="noise" controls>
+        <audio id='13' class="noise " controls>
             <source src="music/signal in the noise.WAVSVN.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
@@ -161,51 +161,77 @@
 
         <p class="hero">radio7</p>
 
-<div>
+
+        <main id="popup" class="hidden">
+            <a class="close1" href="#">x</a>
+
+            <pre></pre>
+        </main>
+
+
+
+
+
+
 
         <pre class="title2"> radio7 000 </pre>
-        <audio id='14' class="four" controls>
-            <source src="music/000.WAVSVN.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-          </audio>
-     <a class ="notepad"><a href="markdown/windows domain.md">> windows_domain.md</a>
+        <audio id='14' class="four audio-player" data-notepad-target="notepad14" controls>
+            <source src="music/001.WAVSVN.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <li  class="notepad"><a class="setlist" id="notepad14" href="markdown/radio7 000.md"></a></li>
+
+
 
         <pre class="title2"> radio7 001 </pre>
-        <audio id='15' class="four" controls>
+        <audio id='15' class="four audio-player" data-notepad-target="notepad15" controls>
             <source src="music/001.WAVSVN.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-          </audio>
+            Your browser does not support the audio element.
+        </audio>
+        <li  class="notepad"><a class="setlist" id="notepad15" href="markdown/radio7 001.md"></a></li>
 
 
-        <pre class="title2"> radio7 002 </pre>
-        <audio id='16' class="four" controls>
+
+        <pre  class="title2"> radio7 002 </pre>
+        <audio id='16' class="four audio-player" data-notepad-target="notepad16" controls>
             <source src="music/002.WAVSVN.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
+          <li  class="notepad"><a class="setlist" id="notepad16" href="markdown/radio7 002.md"></a></li>
 
 
         <pre class="title2"> radio7 003 </pre>
-        <audio id='17' class="four" controls>
+        <audio id='17' class="four audio-player" data-notepad-target="notepad17" controls>
             <source src="music/003.WAVSVN.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
+          <li  class="notepad"><a class="setlist" id="notepad17" href="markdown/radio7 003.md"></a></li>
 
 
         <pre class="title2"> radio7 004 </pre>
-        <audio id='18' class="four" controls>
+        <audio id='18' class="four audio-player" data-notepad-target="notepad18" controls>
             <source src="music/004.WAVSVN.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
+          <li  class="notepad"><a class="setlist" id="notepad18" href="markdown/radio7 004.md"></a></li>
 
 
-        </div>
+
+
+
+
+
+          <main id="popup" class="hidden">
+            <a class="close1" href="#">x</a>
+
+            <pre></pre>
+        </main>
+
         <footer>
             <p>
                 © WAVSVN .//. Unexceptional Industries
             </p>
         </footer>
-
-
 
 
 
@@ -269,6 +295,8 @@
     obj.volume = 0.1;
 
 </script>
+
+<!--
 <script class="popup" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         let popup = $("#popup");
@@ -288,17 +316,44 @@
            popup.addClass("hidden");
 
             e.preventDefault();
-           return false;
+            return false;
         });
         $("#popup .close2").on("click", e => { // when a link in a nav is clicked
            popup.addClass("hidden");
 
             e.preventDefault();
-           return false;
+            return false;
+
         });
 
-    </script>
 
+    </script>
+-->
+<script class="popup" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script class="popup" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    let popup = $("#popup");
+
+    $(".audio-player").on("play", function () {
+        let notepadId = $(this).data("notepad-target");
+        let notepadLink = $("#" + notepadId);
+
+        // Perform the same actions as when a notepad link is clicked
+        $.get(notepadLink.attr("href"), function (data, status) {
+            $("#popup pre").empty();
+            $("#popup pre").html(data);
+            popup.removeClass("hidden");
+        });
+    });
+
+    $("#popup .close1, #popup .close2").on("click", function (e) {
+        popup.addClass("hidden");
+        e.preventDefault();
+        return false;
+    });
+</script>
 </div>
 
     </body>
