@@ -755,19 +755,114 @@ background-size: cover;
   }
 
 
+  .eif::-webkit-media-controls-panel {
+
+    background-color: #007bff;
+    background: url(image/eif.png);
+    background-position: absolute;
+    color: #000000;
+    background-size: cover;
+  }
+  .eif::-webkit-media-controls-current-time-display {
+  color:rgb(0, 0, 0);
+  font-family: monospace;
+  font-weight:bold;
+
+}
+
+  .eif::-webkit-media-controls-time-remaining-display {
+  color:rgb(0, 0, 0);
+  font-family: monospace;
+  font-weight:bold;
+}
+
+
+.somewhere::-webkit-media-controls-panel {
+
+  background-color: #007bff;
+  background: url(image/somewhere.png);
+  background-position: absolute;
+  color: #ffffff;
+background-size: cover;
+}
+
+
+.signal::-webkit-media-controls-panel {
+
+  background-color: #007bff;
+  background: url(image/sigma.png);
+  background-position: absolute;
+  color: #ffffff;
+background-size: cover;
+}
+
+
+.no::-webkit-media-controls-panel {
+
+  background-color: #007bff;
+  background: url(image/no_signal\ .png);
+  background-position: absolute;
+  color: #ffffff;
+background-size: cover;
+}
+
+.noise::-webkit-media-controls-panel {
+
+  background-color: #007bff;
+  background: url(image/blank.jpg);
+  background-position: absolute;
+  color: #ffffff;
+background-size: cover;
+}
+
+.four::-webkit-media-controls-panel {
+
+  background-color: #007bff;
+  background: url(image/004.png);
+  background-position: absolute;
+  color: #ffffff;
+background-size: cover;
+}
+.four::-webkit-media-controls-current-time-display {
+  color:rgb(0, 0, 0);
+  font-family: monospace;
+  font-weight:bold;
+
+}
+
+  .four::-webkit-media-controls-time-remaining-display {
+  color:rgb(0, 0, 0);
+  font-family: monospace;
+  font-weight:bold;
+}
 
 
 
+.refused::-webkit-media-controls-panel {
+
+  background-color: #007bff;
+  background: url(image/CONNECTION\ REFUSED.png);
+  background-position: absolute;
+  color: #ffffff;
+background-size: cover;
+}
   audio::-webkit-media-controls-timeline {
     color: #ff0000;
   }
 
   audio::-webkit-media-controls-current-time-display {
     color:white;
+    font-family: monospace;
+    font-weight:bold;
+
   }
 
 audio::-webkit-media-controls-time-remaining-display {
     color:white;
+    font-family: monospace;
+    font-weight:bold;
+
+
 }
 
 .title {

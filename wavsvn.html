@@ -32,12 +32,198 @@
 
 
 
+
+
+
+
         <pre class="title"> aliasing </pre>
-        <audio class="aliasing" controls>
+        <audio id="1" class="aliasing" controls>
             <source src="music/aliasing.WAVSVN.mp3" type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
         <a class="dlmusic" href="music/aliasing.WAVSVN.mp3" download>\\\ install aliasing.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> bluescreen </pre>
+        <audio id="2" class="aliasing" controls>
+            <source src="music/bluescreen.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/bluescreen.WAVSVN.mp3" download>\\\ install bluescreen.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> machines decision is final </pre>
+        <audio id="3" class="aliasing" controls>
+            <source src="music/machines decision is final.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/machines decision is final.WAVSVN.mp3" download>\\\ install machines decision is final.WAVSVN.mp3 \\\</a>
+
+
+
+
+
+
+
+        <pre class="title"> navigate </pre>
+        <audio id="4" class="eif" controls>
+            <source src="music/navigate.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/navigate.WAVSVN.mp3" download>\\\ install navigate.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> paradoxymoronic </pre>
+        <audio id="5" class="eif" controls>
+            <source src="music/paradoxymoronic.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/paradoxymoronic.WAVSVN.mp3" download>\\\ install paradoxymoronic.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> vintage alterboy </pre>
+        <audio id="6'" class="eif" controls>
+            <source src="music/vintage alterboy.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/vintage alterboy.WAVSVN.mp3" download>\\\ install vintage alterboy.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> leap_frog </pre>
+        <audio id="7" class="eif" controls>
+            <source src="music/leap_frog.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/leap_frog.WAVSVN.mp3" download>\\\ install leap_frog.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> misunderstanding </pre>
+        <audio id='8' class="eif" controls>
+            <source src="music/misunderstanding.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/misunderstanding.WAVSVN.mp3" download>\\\ install misunderstanding.WAVSVN.mp3 \\\</a>
+
+
+
+
+
+
+
+        <pre class="title"> somewhere between </pre>
+        <audio id='9' class="somewhere" controls>
+            <source src="music/somewhere between.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/somewhere between.WAVSVN.mp3" download>\\\ install somewhere between.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> connection refused </pre>
+        <audio id='10' class="refused" controls>
+            <source src="music/connection refused.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/connection refused.WAVSVN.mp3" download>\\\ install connection refused.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> signal </pre>
+        <audio id='11' class="signal" controls>
+            <source src="music/signal.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/signal.WAVSVN.mp3" download>\\\ install signal.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> no signal </pre>
+        <audio id='12' class="no" controls>
+            <source src="music/no signal.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/no signal.WAVSVN.mp3" download>\\\ install no signal.WAVSVN.mp3 \\\</a>
+
+
+        <pre class="title"> signal in the noise </pre>
+        <audio id='12' class="noise" controls>
+            <source src="music/signal in the noise.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        <a class="dlmusic" href="music/signal in the noise.WAVSVN.mp3" download>\\\ install signal in the noise.WAVSVN.mp3 \\\</a>
+
+
+
+
+
+
+
+        <pre class="title"> 0004 </pre>
+        <audio id='12' class="four" controls>
+            <source src="music/004.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+                    window.addEventListener('DOMContentLoaded', (event) => {
+                        setDefaultVolumeForAllPlayers(0.1);
+                    });
+
+                    function setDefaultVolumeForAllPlayers(defaultVolume) {
+                        var audioPlayers = document.querySelectorAll('audio');
+
+                        audioPlayers.forEach(function(player) {
+                            player.volume = defaultVolume;
+                        });
+                    }
+
+    // Add event listeners to all audio players
+    window.addEventListener('DOMContentLoaded', (event) => {
+        addAudioEventListeners();
+    });
+
+    function addAudioEventListeners() {
+        // Get all audio players on the page
+        var audioPlayers = document.querySelectorAll('audio');
+
+        // Loop through each audio player and add event listeners
+        audioPlayers.forEach(function(player) {
+            player.addEventListener('play', function() {
+                pauseOtherPlayers(player.id);
+            });
+        });
+    }
+
+    function pauseOtherPlayers(currentPlayerId) {
+        // Get all audio players on the page
+        var audioPlayers = document.querySelectorAll('audio');
+
+        // Loop through each audio player and pause it if it's not the current player
+        audioPlayers.forEach(function(player) {
+            if (player.id !== currentPlayerId) {
+                player.pause();
+            }
+        });
+    }
+</script>
+
+
+
 <!--
         <pre class="title"> um.serum </pre>
         <audio class="premaster" controls>
@@ -46,9 +232,15 @@
           </audio>
         <a class="dlmusic" href="music/aliasing.WAVSVN.flac" download>\\\ install premaster.WAVSVN.flac \\\</a>
 
-        -->
+
 
 </div>
 
     </body>
-<script></script>
+<script>
+
+const obj = document.createElement("audio");
+console.log(obj.volume); // .5
+obj.volume = 0.1;
+
+</script>
