@@ -892,3 +892,11 @@ audio::-webkit-media-controls-time-remaining-display {
   color: red;
   font-size: 25px;
 }
+
+
+.audius {
+
+
+  margin-top: 250px;
+  display: flex;
+}
