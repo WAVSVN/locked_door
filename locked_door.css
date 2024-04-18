@@ -99,7 +99,7 @@ body {
     display: flex;
     flex-direction: column;
     color:rgb(53, 86, 101);
-    margin-top: 70px;
+    margin-top: 130px;
     height: fit-content;
 
 
@@ -899,4 +899,22 @@ audio::-webkit-media-controls-time-remaining-display {
 
   margin-top: 250px;
   display: flex;
+}
+
+.ao_logo {
+
+
+  height: 100px;
+}
+
+.logo {
+  height: 17px;
+margin-right: 10px;
+margin-top: 10px;;
+
+}
+
+.block {
+
+  margin-top: 2;
 }
