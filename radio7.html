@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script language="javascript"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Trevor Achtermann">
+    <meta name="description" content="project_site">
+    <title>locked_door</title>
+    <link href="./locked_door.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Visualizer</title>
+    <style>
+        #visualizer {
+            width: 100%;
+            height: 200px;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar {
+            width: 4px;
+            height: 100%;
+            background-color: #ff5722;
+            position: absolute;
+            bottom: 0;
+            transition: height 0.1s;
+        }
+    </style>
+</head>
+<body>
+
+<header class="tree">
+
+    <a class="root">
+        <a class="reset" href="index.html">
+            <img class="doorgif" src="./video/door.gif" /></img>
+
+        <pre>
+            011100
+            100110
+            010101
+            110011
+            011001
+            010111
+            010000
+        </pre></a>
+<div class="musics"></div>
+
+        <p class="hero">RADIO7</p>
+
+
+        <main id="popup" class="hidden">
+            <a class="close1" href="#">x</a>
+
+            <pre></pre>
+        </main>
+
+        <pre class="title2"> 006: SUPERSAW </pre>
+        <img class="radio" src="image/006.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='18' class="four audio-player" data-notepad-target="notepad18" controls>
+            <source src="music/WAVSVN __ SUPERSAW.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <li  class="notepad"><a class="setlist" id="notepad18" href="markdown/006.md"></a></li>
+
+
+        <pre class="title2"> 005: starship.demo </pre>
+        <img class="radio" src="image/005.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='18' class="four audio-player" data-notepad-target="notepad18" controls>
+            <source src="music/starship.demo.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <li  class="notepad"><a class="setlist" id="notepad18" href="markdown/005.md"></a></li>
+
+
+
+        <pre class="title2"> 004 </pre>
+        <img class="radio" src="image/004.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='18' class="four audio-player" data-notepad-target="notepad18" controls>
+            <source src="music/004.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <li  class="notepad"><a class="setlist" id="notepad18" href="markdown/radio7 004.md"></a></li>
+
+
+        <pre class="title2"> 003 </pre>
+        <img class="radio" src="image/003.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='17' class="four audio-player" data-notepad-target="notepad17" controls>
+            <source src="music/003.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <li  class="notepad"><a class="setlist" id="notepad17" href="markdown/radio7 003.md"></a></li>
+
+
+        <pre  class="title2"> 002 </pre>
+        <img class="radio" src="image/002.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='16' class="four audio-player" data-notepad-target="notepad16" controls>
+            <source src="music/002.WAVSVN.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+          <li  class="notepad"><a class="setlist" id="notepad16" href="markdown/radio7 002.md"></a></li>
+
+
+        <pre class="title2"> 001 </pre>
+        <img class="radio" src="image/001.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='15' class="four audio-player" data-notepad-target="notepad15" controls>
+            <source src="music/001.WAVSVN.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <li  class="notepad"><a class="setlist" id="notepad15" href="markdown/radio7 001.md"></a></li>
+
+
+
+
+        <pre class="title2"> 000 </pre>
+        <img class="radio" src="image/invertdisc.png" <a href="https://audius.co/wavsvn" </a>
+        <audio id='14' class="four audio-player" data-notepad-target="notepad14" controls>
+            <source src="music/000.WAVSVN.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <li  class="notepad"><a class="setlist" id="notepad14" href="markdown/radio7 000.md"></a></li>
+
+
+          <main id="popup" class="hidden">
+            <a class="close1" href="#">x</a>
+
+            <pre></pre>
+        </main>
+
+        <footer>
+            <p>
+                © WAVSVN .//. Unexceptional Industries
+            </p>
+        </footer>
+
+
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                setDefaultVolumeForAllPlayers(0.3);
+            });
+
+            function setDefaultVolumeForAllPlayers(defaultVolume) {
+                var audioPlayers = document.querySelectorAll('audio');
+
+                audioPlayers.forEach(function(player) {
+                    player.volume = defaultVolume;
+                });
+            }
+
+// Add event listeners to all audio players
+window.addEventListener('DOMContentLoaded', (event) => {
+addAudioEventListeners();
+});
+
+function addAudioEventListeners() {
+// Get all audio players on the page
+var audioPlayers = document.querySelectorAll('audio');
+
+// Loop through each audio player and add event listeners
+audioPlayers.forEach(function(player) {
+    player.addEventListener('play', function() {
+        pauseOtherPlayers(player.id);
+    });
+});
+}
+
+function pauseOtherPlayers(currentPlayerId) {
+// Get all audio players on the page
+var audioPlayers = document.querySelectorAll('audio');
+
+// Loop through each audio player and pause it if it's not the current player
+audioPlayers.forEach(function(player) {
+    if (player.id !== currentPlayerId) {
+        player.pause();
+    }
+});
+}
+</script>
+
+<script>
+
+const obj = document.createElement("audio");
+console.log(obj.volume); // .5
+obj.volume = 0.3;
+
+</script>
+
+<script class="popup" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script class="popup" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    let popup = $("#popup");
+
+    $(".audio-player").on("play", function () {
+        let notepadId = $(this).data("notepad-target");
+        let notepadLink = $("#" + notepadId);
+
+        // Perform the same actions as when a notepad link is clicked
+        $.get(notepadLink.attr("href"), function (data, status) {
+            $("#popup pre").empty();
+            $("#popup pre").html(data);
+            popup.removeClass("hidden");
+        });
+    });
+
+    $("#popup .close1, #popup .close2").on("click", function (e) {
+        popup.addClass("hidden");
+        e.preventDefault();
+        return false;
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const audioPlayer = document.getElementById('audio-player');
+    const visualizer = document.getElementById('visualizer');
+
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const analyser = audioCtx.createAnalyser();
+    const source = audioCtx.createMediaElementSource(audioPlayer);
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
+    analyser.fftSize = 256;
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    const barWidth = (visualizer.clientWidth / bufferLength);
+
+    function renderFrame() {
+        requestAnimationFrame(renderFrame);
+        analyser.getByteFrequencyData(dataArray);
+
+        for (let i = 0; i < bufferLength; i++) {
+            const barHeight = (dataArray[i] / 255) * visualizer.clientHeight;
+            const bar = document.createElement('div');
+            bar.className = 'bar';
+            bar.style.width = barWidth + 'px';
+            bar.style.height = barHeight + 'px';
+            bar.style.left = (barWidth * i) + 'px';
+            visualizer.appendChild(bar);
+        }
+    }
+
+    renderFrame();
+});
+
+</script>

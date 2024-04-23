@@ -480,7 +480,7 @@ border: #f21f10;
   background: rgba(0, 0, 0, 0.8);
   padding: 32px;
   height: 150vh;
-  width: 70%;
+  width: 90%;
 }
 
 #popup.hidden {
@@ -496,10 +496,12 @@ border: #f21f10;
     align-content: flex-end;
     width: 50%;
     height: 100vh;
-position:sticky;
+    position: sticky;
     color: white;
-    overflow-y:scroll;
-margin-bottom: 50px;
+    overflow-x: hidden; /* Changed to hidden to prevent horizontal overflow */
+    overflow-y: scroll;
+    margin-bottom: 50px;
+    white-space: pre-wrap; /* Added to allow word wrapping */
 }
 
 
@@ -737,7 +739,7 @@ margin-bottom: 50px;
   }
 
   audio::-webkit-media-controls-play-button{
-    color:white;
+    color:rgb(255, 255, 255);
   }
 
 
@@ -751,7 +753,7 @@ margin-bottom: 50px;
     background-color: #007bff;
     background: url(image/bluescreen.png);
     background-position: absolute;
-    color: #ffffff;
+    color: #000000;
 background-size: cover;
 
   }
@@ -761,7 +763,7 @@ background-size: cover;
     background-color: #007bff;
     background: url(image/premaster.png);
     background-position: absolute;
-    color: #ffffff;
+    color: #000000;
 background-size: cover;
   }
 
@@ -775,7 +777,7 @@ background-size: cover;
     background-size: cover;
   }
   .eif::-webkit-media-controls-current-time-display {
-  color:rgb(0, 0, 0);
+  color:rgb(5, 5, 5);
   font-family: monospace;
   font-weight:bold;
 
@@ -788,78 +790,74 @@ background-size: cover;
 }
 
 
-.somewhere::-webkit-media-controls-panel {
 
-  background-color: #007bff;
-  background: url(image/somewhere.png);
-  background-position: absolute;
-  color: #ffffff;
-background-size: cover;
-}
-
-
-.signal::-webkit-media-controls-panel {
-
-  background-color: #007bff;
-  background: url(image/sigma.png);
-  background-position: absolute;
-  color: #ffffff;
-background-size: cover;
-}
-
-
-.no::-webkit-media-controls-panel {
-
-  background-color: #007bff;
-  background: url(image/no_signal\ .png);
-  background-position: absolute;
-  color: #ffffff;
-background-size: cover;
-}
-
-.noise::-webkit-media-controls-panel {
-
-  background-color: #007bff;
-  background: url(image/blank.jpg);
-  background-position: absolute;
-  color: #ffffff;
-background-size: cover;
-}
 
 .four::-webkit-media-controls-panel {
 
-  background-color: #007bff;
-  background: url(image/radio7.png);
+  background-color: #000000;
   background-position: absolute;
-  color: #ffffff;
-background-size: cover;
+  color: #ff0000;
+background-size: contain;
+background-repeat: no-repeat;
+
+
+}
+/* Change all controls of WebKit audio player to white */
+.four::-webkit-media-controls-panel {
+  color: rgb(255, 0, 0);
+}
+
+.audio-player::-webkit-media-controls-play-button,
+.audio-player::-webkit-media-controls-volume-slider-container {
+  filter: invert(100%);
+}
+
+.audio-player::-webkit-media-controls-seek-back-button,
+.audio-player::-webkit-media-controls-seek-forward-button {
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(180deg);
+}
+/* Change all controls of WebKit audio player to white */
+.audio-player::-webkit-media-controls-panel {
+  color: white;
+}
+
+.audio-player::-webkit-media-controls-volume-slider {
+  filter: invert(100%);
+}
+
+.audio-player::-webkit-media-controls-current-time-display,
+.audio-player::-webkit-media-controls-time-remaining-display {
+  color: white;
+}
+
+.audio-player::-webkit-media-controls-play-button,
+.audio-player::-webkit-media-controls-mute-button {
+  filter: invert(100%);
+}
+
+.audio-player::-webkit-media-controls-seek-back-button,
+.audio-player::-webkit-media-controls-seek-forward-button {
+  filter: invert(100%) sepia(100%) saturate(100%) hue-rotate(180deg);
+}
+
+audio::-webkit-media-controls-overflow-button {
+  color: white !important;
 }
 
 
 
 
 
-.refused::-webkit-media-controls-panel {
-
-  background-color: #007bff;
-  background: url(image/CONNECTION\ REFUSED.png);
-  background-position: absolute;
-  color: #ffffff;
-background-size: cover;
-}
-  audio::-webkit-media-controls-timeline {
-    color: #ff0000;
-  }
 
   audio::-webkit-media-controls-current-time-display {
-    color:white;
+    color:rgb(255, 255, 255);
     font-family: monospace;
     font-weight:bold;
 
   }
 
 audio::-webkit-media-controls-time-remaining-display {
-    color:white;
+    color:rgb(255, 255, 255);
     font-family: monospace;
     font-weight:bold;
 
@@ -876,9 +874,10 @@ audio::-webkit-media-controls-time-remaining-display {
 
 .title2 {
   color:rgb(255, 255, 255);
-  font-size: 17px;
-  padding:10px;
+  font-size: 20px;
   width: fit-content;
+  margin-bottom: -5px;
+  margin-top: 20px;
 }
 
 
@@ -896,9 +895,14 @@ audio::-webkit-media-controls-time-remaining-display {
 
 .audius {
 
-
-  margin-top: 250px;
   display: flex;
+  width: 300px;
+}
+
+.radio {
+
+  display: flex;
+  width: 300px;
 }
 
 .ao_logo {
@@ -917,4 +921,10 @@ margin-top: 10px;;
 .block {
 
   margin-top: 2;
+}
+
+
+
+.audio::-webkit-media-controls-timeline {
+color: white !important;
 }
