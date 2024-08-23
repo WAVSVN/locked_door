@@ -32,6 +32,10 @@ html, body {
     display: flex;
     flex-direction: column;
     background-color: black; /* Ensure background color is consistent */
+    margin: 0; /* Ensure no default margin */
+    padding: 0; /* Ensure no default padding */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+
 }
 
 /* Wrapper to ensure footer stays at the bottom */
@@ -42,18 +46,19 @@ html, body {
 
 /* Header styles */
 .header {
-    position: fixed;
+    position: fixed; /* Fixed to keep it at the top */
     top: 0;
     left: 0;
+    right: 0; /* Ensure header spans full width */
     width: 100%;
     background-color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     transition: top 0.3s;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden; /* Prevent header content from overflowing */
 }
 
 /* Header content layout */
@@ -88,7 +93,6 @@ html, body {
 
 /* Contact Me button on the right */
 .contact-me-button {
-    padding: 8px 16px;
     font-size: 20px;
     background-color: #000000;
     color: #ff0000;
@@ -96,7 +100,7 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 30px;
+    margin-right: 60px;
 }
 
 .contact-me-button:hover {
@@ -140,9 +144,9 @@ html, body {
     flex-wrap: wrap;
     gap: 0px;
     justify-content: center;
-
-margin-top: 370px;
+    z-index: 2;
     width: 100%;
+    margin-top: 200px;
 }
 
 /* Each grid item */
@@ -185,12 +189,13 @@ margin-top: 370px;
 /* Social media dock for artist cells */
 .social-dock {
     position: absolute;
-    top: 30px;
-    right: -35px;
+    top: 2%;
+    right: -2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
     width: 30%; /* Width relative to the cell */
     max-width: 100%; /* Ensure dock doesn't overflow */
     opacity: 0;
@@ -198,11 +203,11 @@ margin-top: 370px;
 }
 
 .social-icon {
-    width: 100%;
+    width: 30%;
     display: flex;
     justify-content: center;
-    margin-bottom: 25px; /* Adjust spacing between icons */
-    margin-right: -40px;
+    margin-bottom: 35px; /* Adjust spacing between icons */
+
 }
 
 .social-icon img {
@@ -241,6 +246,7 @@ margin-top: 370px;
         flex: 1 1 100%;
         max-width: 100%;
         height: auto;
+        margin: 0px;
     }
 
     .artist-image,
@@ -249,11 +255,11 @@ margin-top: 370px;
     }
 
     .social-dock {
-        width: 50%; /* Adjust width for smaller screens */
+        width: 20%; /* Adjust width for smaller screens */
     }
 
     .social-icon img {
-        max-width: 40px; /* Smaller icons on small screens */
+        max-width: 30px; /* Smaller icons on small screens */
     }
 }
 
@@ -271,12 +277,13 @@ margin-top: 370px;
     bottom: 0;
 }
 
-/* Fixed logo gif */
 .logogif-container {
     position: relative;
-    width: 50%;
+    width: 100%; /* Ensure full width */
     height: 50vh;
     overflow: hidden;
+    padding:100px;
+    margin: 70px;
 }
 
 .logogif {
@@ -285,11 +292,9 @@ margin-top: 370px;
     left: 50%;
     transform: translate(-50%, -50%);
     clip-path: inset(50px 50px 10px 50px);
-    max-width: 50%;
-    max-height: 50%;
-    z-index: 0;
-}
-
+    max-width: 100%; /* Ensure full width scaling */
+    max-height: 100%; /* Ensure full height scaling */
+    z-index: 1;
 footer {
     display: flex;
     justify-content: center;
