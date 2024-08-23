@@ -67,12 +67,11 @@ body {
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 /* Logo styles */
 .logo {
-    height: 80px;
+    height: 40px;
     width: auto;
     margin-right: 20px;
 }
@@ -94,14 +93,17 @@ body {
 
 /* Contact Me button on the right */
 .contact-me-button {
-    font-size: 20px;
+
+    font-size: 14px;
     background-color: #000000;
     color: #ff0000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 30px;
+    overflow:hidden;
+    margin-left: -10px;
+
 }
 
 .contact-me-button:hover {
@@ -283,8 +285,6 @@ body {
     justify-content: center; /* Center the GIF horizontally */
     align-items: center; /* Center the GIF vertically if needed */
     width: 100%;
-    padding-top: 100px; /* Add padding to prevent overlap with header */
-    margin-top: 20px; /* Ensure spacing below header */
     overflow: hidden;
     padding-bottom: 30px;
 }
@@ -292,11 +292,9 @@ body {
 /* GIF styling */
 .logogif {
     max-width: 100%; /* Ensure full width scaling */
-    max-height: 50vh; /* Ensure it doesn't exceed half the viewport height */
-    object-fit: contain; /* Maintain aspect ratio and contain within parent */
+    max-height: 800px; /* Ensure it doesn't exceed half the viewport height */
     clip-path: inset(20px 20px 20px 20px); /* Crops 20px from each side */
-    margin-bottom: -70px;;
-
+    margin-top: 100px;
 }
 
 /* Styles for the left text box */
@@ -364,10 +362,12 @@ body {
         text-align: center; /* Center text horizontally */
         margin: 10px 0; /* Add spacing between the text boxes */
         transform: none; /* Remove any transform */
+        font-size: 10px;
         animation-delay: 0s; /* Reset delay on stacking */
     }
 
     .right-text {
+        font-size: 10px;
         order: 2; /* Display the right text first */
         animation-delay: 2s; /* Right text animates first on mobile */
     }
