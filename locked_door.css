@@ -97,7 +97,7 @@ body {
 
     background-color: none;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color:rgb(53, 86, 101);
     margin-top: 130px;
     height: fit-content;
