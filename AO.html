@@ -32,7 +32,9 @@
     </header>
 
     <div class="logogif-container">
-        <img src="./image/ANOMALYONE_8color.gif" class="logogif" alt="Logo GIF">
+        <img src="/image/ANOMALYONE_8color.gif" class="logogif" alt="Logo GIF">
+        <div class="left-text" id="leftText">DEVIATE FROM THE STANDARD</div>
+        <div class="right-text" id="rightText">BE AN ANOMALY</div>
     </div>
 
     <div class="artist-grid">
@@ -322,15 +324,28 @@ function shuffleArray(array) {
 
         // Hide header on scroll
         let lastScrollTop = 0;
-        window.addEventListener("scroll", function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (scrollTop > lastScrollTop) {
-                document.querySelector(".header").style.top = "-100px";
-            } else {
-                document.querySelector(".header").style.top = "0";
-            }
-            lastScrollTop = scrollTop;
-        });
+
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const header = document.querySelector(".header");
+
+    if (scrollTop > lastScrollTop) {
+        header.style.top = "-100px"; // Hide header when scrolling down
+    } else {
+        header.style.top = "0"; // Show header when scrolling up
+    }
+
+    lastScrollTop = scrollTop;
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        const animatedText = document.getElementById('animatedText');
+        animatedText.style.display = 'block'; // Make text visible after delay
+    }, 2000); // 2 seconds delay
+});
 
 </script>
 </html>
