@@ -294,6 +294,9 @@ body {
     max-width: 100%; /* Ensure full width scaling */
     max-height: 50vh; /* Ensure it doesn't exceed half the viewport height */
     object-fit: contain; /* Maintain aspect ratio and contain within parent */
+    clip-path: inset(20px 20px 20px 20px); /* Crops 20px from each side */
+    margin-bottom: -70px;;
+
 }
 
 /* Styles for the left text box */
