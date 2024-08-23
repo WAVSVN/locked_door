@@ -17,6 +17,30 @@ body {
 }
 
 
+/* CSS Reset to remove any default margin or padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: black; /* Ensure background color is consistent */
+}
+
+/* Wrapper to ensure footer stays at the bottom */
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header styles */
 .header {
     position: fixed;
     top: 0;
@@ -42,7 +66,7 @@ body {
 
 /* Logo styles */
 .logo {
-    height: 110px;
+    height: 80px;
     width: auto;
     margin-right: 20px;
 }
@@ -106,22 +130,18 @@ body {
 /* Social icon animations for header */
 .social-icon-header img {
     opacity: 0;
-    transform: translateX(-20px); /* Start hidden */
+    transform: translateX(-20px);
     animation: none;
 }
 
-/* IMG GRID */
-
-/* Container for the image grid */
+/* Artist grid container */
 .artist-grid {
-    top: 90px;
     display: flex;
     flex-wrap: wrap;
     gap: 0px;
     justify-content: center;
-    padding: 10px;
-    margin: 0 auto;
-    margin-top: -170px;
+
+margin-top: 370px;
     width: 100%;
 }
 
@@ -144,73 +164,11 @@ body {
     top: 0;
     left: 0;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out; /* Fallback for older browsers */
+    transition: opacity 0.5s ease-in-out;
 }
 
 .artist-hover-image {
-    opacity: 0; /* Initially hidden */
-}
-
-.glitch {
-    animation: glitch-animation 0.7s steps(10) forwards;
-}
-
-@keyframes glitch-animation {
-    0% {
-        clip: rect(10px, 9999px, 100px, 0);
-        transform: translate(2px, -2px);
-        opacity: 0.6;
-    }
-    10% {
-        clip: rect(20px, 9999px, 90px, 0);
-        transform: translate(-2px, 2px);
-        opacity: 0.8;
-    }
-    20% {
-        clip: rect(30px, 9999px, 80px, 0);
-        transform: translate(2px, 2px);
-        opacity: 0.4;
-    }
-    30% {
-        clip: rect(40px, 9999px, 70px, 0);
-        transform: translate(-2px, -2px);
-        opacity: 0.9;
-    }
-    40% {
-        clip: rect(50px, 9999px, 60px, 0);
-        transform: translate(2px, -2px);
-        opacity: 0.7;
-    }
-    50% {
-        clip: rect(60px, 9999px, 50px, 0);
-        transform: translate(-2px, 2px);
-        opacity: 0.5;
-    }
-    60% {
-        clip: rect(70px, 9999px, 40px, 0);
-        transform: translate(2px, 2px);
-        opacity: 0.9;
-    }
-    70% {
-        clip: rect(80px, 9999px, 30px, 0);
-        transform: translate(-2px, -2px);
-        opacity: 0.6;
-    }
-    80% {
-        clip: rect(90px, 9999px, 20px, 0);
-        transform: translate(2px, -2px);
-        opacity: 0.8;
-    }
-    90% {
-        clip: rect(100px, 9999px, 10px, 0);
-        transform: translate(-2px, 2px);
-        opacity: 1;
-    }
-    100% {
-        clip: rect(10px, 9999px, 100px, 0);
-        transform: translate(0, 0);
-        opacity: 1;
-    }
+    opacity: 0;
 }
 
 /* Logo image styling */
@@ -227,24 +185,33 @@ body {
 /* Social media dock for artist cells */
 .social-dock {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 30px;
+    right: -35px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%; /* Width relative to the cell */
+    max-width: 100%; /* Ensure dock doesn't overflow */
     opacity: 0;
     z-index: 15;
 }
 
-.social-icon img {
-    width: 70%; /* Adjust percentage to scale icons responsively */
-    max-width: 50px;
-    height: auto;
-    margin-bottom: 10px;
-    margin-top: 40px;
-    opacity: 1;
-    transform: translateY(-20px);
+.social-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px; /* Adjust spacing between icons */
+    margin-right: -40px;
 }
 
+.social-icon img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-width: 50px; /* Ensure icons don't get too large */
+}
+
+/* Animations for artist cell icons */
 @keyframes cascade-in {
     0% {
         opacity: 0;
@@ -280,6 +247,28 @@ body {
     .artist-hover-image {
         height: auto;
     }
+
+    .social-dock {
+        width: 50%; /* Adjust width for smaller screens */
+    }
+
+    .social-icon img {
+        max-width: 40px; /* Smaller icons on small screens */
+    }
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
 }
 
 /* Fixed logo gif */
