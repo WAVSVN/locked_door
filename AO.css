@@ -49,8 +49,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    right: 0; /* Ensure header spans full width */
-    width: 100%;
+    width: 95%;
     background-color: black;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -148,21 +147,20 @@ body {
 .artist-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0px;
     justify-content: center;
-    z-index: 2;
     width: 100%;
-    margin-top:100px;
-
+    margin-top: 100px;
+    overflow: hidden; /* Prevent overflow */
 }
 
 /* Each grid item */
 .artist-cell {
-    position: relative;
-    flex: 1 1 calc(33.33% - 20px);
-    aspect-ratio: 0.84 / 1;
-    box-sizing: border-box;
-    overflow: hidden;
+        flex: 1 1 33.33%; /* Remove the -20px to ensure the grid fits perfectly */
+        max-width: 33.33%; /* Ensure the width does not exceed container width */
+        aspect-ratio: 0.84 / 1;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;
 }
 
 /* Image Styling */
@@ -308,7 +306,7 @@ body {
 /* GIF styling */
 .logogif {
     margin-top: 70px;
-    max-width: 80%; /* Ensure full width scaling */
+    max-width: 90%; /* Ensure full width scaling */
     max-height: 800px; /* Ensure it doesn't exceed half the viewport height */
     clip-path: inset(20px 20px 20px 20px); /* Crops 20px from each side */
 }
