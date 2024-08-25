@@ -65,13 +65,13 @@ body {
 .header-content {
     display: flex;
     justify-content: space-between;
-    width: 95%;
+    width: 100%;
     align-items: center;
 }
 
 /* Logo styles */
 .logo {
-    height: 40px;
+    height: 80px;
     width: auto;
 
 }
@@ -327,6 +327,8 @@ body {
     opacity: 0; /* Start invisible */
     animation: flash-in-left-text 0.5s forwards; /* Animation effect */
     animation-delay: 2s; /* Delay before animation starts */
+    order: s; /* Display the right text first */
+
 }
 
 /* Styles for the right text box */
@@ -342,6 +344,8 @@ body {
     opacity: 0; /* Start invisible */
     animation: flash-in-right-text 0.5s forwards; /* Animation effect */
     animation-delay: 3s; /* Staggered delay before animation starts */
+    order: 1; /* Display the right text first */
+
 }
 
 /* Flash-in animation keyframes for left text */
