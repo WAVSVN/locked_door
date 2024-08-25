@@ -1,0 +1,32 @@
+/* Responsive adjustments for medium screens */
+@media (max-width: 1200px) {
+    .left-text,
+    .right-text {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin-top: -50px 0;
+        transform: none;
+        font-size: 10px;
+        animation-delay: 0s;
+    }
+
+    .right-text {
+        font-size: 10px;
+        order: 2;
+        animation-delay: 2s;
+    }
+
+    .left-text {
+        order: 1;
+        animation-delay: 3s;
+    }
+
+    .logogif-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        margin-top: 0;
+    }
+}
