@@ -1,0 +1,319 @@
+/* General Styles */
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Hide scrollbars */
+::-webkit-scrollbar {
+    display: none;
+}
+.container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Wrapper to ensure footer stays at the bottom */
+.wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s ease;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Header content layout */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    height: 80px;
+    width: auto;
+}
+
+/* Social media dock with horizontal layout */
+.social-media-dock-header {
+    display: flex;
+    margin-left: auto;
+}
+
+.social-icon-header img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: none;
+}
+
+/* Contact Me button on the right */
+.contact-me-button {
+    font-size: 14px;
+    background-color: #000000;
+    color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow: hidden;
+    margin-left: -10px;
+    padding: 20px;
+}
+
+.contact-me-button:hover {
+    color: white;
+}
+
+/* Social icon animations for header */
+.social-icon-header img {
+    opacity: 0;
+    transform: translateX(-1px);
+    animation: none;
+    display: flex;
+}
+
+/* Artist grid container */
+.artist-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* Each grid item */
+.artist-cell {
+    position: relative;
+    flex: 1 1 calc(33.33% - 20px);
+    aspect-ratio: 0.84 / 1;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Image Styling */
+.artist-image,
+.artist-hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.artist-hover-image {
+    opacity: 0;
+}
+
+/* Logo image styling */
+.artist-logo {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80%;
+    height: auto;
+    z-index: 10;
+}
+
+/* Social media dock for artist cells */
+.social-dock {
+    position: absolute;
+    top: 2%;
+    right: -2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 30%;
+    max-width: 100%;
+    opacity: 0;
+    z-index: 15;
+}
+
+.social-icon {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.social-icon img {
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+}
+
+/* Footer styling */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    bottom: 0;
+}
+
+.logogif-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 105%;
+    padding-bottom: 30px;
+}
+
+/* GIF styling */
+.logogif {
+    margin-top: 70px;
+    max-width: 80%;
+    max-height: 800px;
+    clip-path: inset(20px 20px 20px 20px);
+}
+
+/* Styles for the left text box */
+.left-text {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    font-family: monospace;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    animation: flash-in-left-text 0.5s forwards;
+    animation-delay: 2s;
+    order: s;
+}
+
+/* Styles for the right text box */
+.right-text {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    font-family: monospace;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    animation: flash-in-right-text 0.5s forwards;
+    animation-delay: 3s;
+    order: 1;
+}
+
+/* Keyframes for animations */
+@keyframes cascade-in-horizontal-header {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes flash-in-horizontal-header {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes cascade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flash-in {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash-in-left-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flash-in-right-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
