@@ -28,5 +28,9 @@
     .social-icon img {
         max-width: 30px;
     }
+
+    .logo {
+        height: 40px;
+    }
 }
 

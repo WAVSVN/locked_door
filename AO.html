@@ -14,7 +14,7 @@
     <meta name="author" content="jett.sys \ WAVSVN">
     <meta name="description" content="ANOMALY-ONE">
     <title>locked_door</title>
-    <link href="./AO.dekstop.css" rel="stylesheet">
+    <link href="./AO.desktop.css" rel="stylesheet">
     <link href="./AO.mobile.css" rel="stylesheet">
     <link href="./AO.tablet.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -206,6 +206,45 @@
     </body>
     <footer> © 2024 ANOMALY ONE Management, LLC. All Rights Reserved</footer>
 <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Check if the device is mobile or tablet
+    const isMobileOrTablet = window.innerWidth <= 1200;
+
+    // Get all artist cells
+    const artistCells = document.querySelectorAll('.artist-cell');
+
+    if (isMobileOrTablet) {
+        // Trigger animations automatically on page load in a staggered fashion
+        artistCells.forEach((cell, index) => {
+            setTimeout(() => {
+                triggerGlitchEffect(cell);
+            }, index * 500); // Adjust the delay (500ms) as needed for staggering
+        });
+    } else {
+        // For desktop, retain hover and click behavior
+        artistCells.forEach(cell => {
+            cell.dataset.glitchActive = "false";
+
+            cell.addEventListener('mouseenter', () => {
+                triggerGlitchEffect(cell);
+            });
+
+            cell.addEventListener('mouseleave', () => {
+                resetCell(cell);
+            });
+
+            cell.addEventListener('click', () => {
+                triggerGlitchEffect(cell);
+            });
+        });
+    }
+
+    // Header social media dock functionality remains the same
+    triggerCascadeAnimationForHeader();
+});
+
+
+
 function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -214,7 +253,7 @@ function shuffleArray(array) {
             return array;
         }
 
-        function triggerCascadeAnimation(cell) {
+function triggerCascadeAnimation(cell) {
             const icons = Array.from(cell.querySelectorAll('.social-icon'));
 
             cell.querySelector('.social-dock').style.opacity = '1';
@@ -229,7 +268,7 @@ function shuffleArray(array) {
             }, (icons.length - 1) * 70 + 2);
         }
 
-        function randomizeFlashAnimation(cell) {
+function randomizeFlashAnimation(cell) {
             const icons = Array.from(cell.querySelectorAll('.social-icon'));
             const shuffledIcons = shuffleArray(icons);
 
@@ -239,7 +278,7 @@ function shuffleArray(array) {
             });
         }
 
-        function triggerGlitchEffect(cell) {
+function triggerGlitchEffect(cell) {
             const originalImage = cell.querySelector('.artist-image');
             const hoverImage = cell.querySelector('.artist-hover-image');
             const socialDock = cell.querySelector('.social-dock');
@@ -259,7 +298,7 @@ function shuffleArray(array) {
             }
         }
 
-        function resetCell(cell) {
+function resetCell(cell) {
             const originalImage = cell.querySelector('.artist-image');
             const hoverImage = cell.querySelector('.artist-hover-image');
             const socialDock = cell.querySelector('.social-dock');
@@ -292,7 +331,7 @@ function shuffleArray(array) {
         });
 
         // Header social media dock functionality
-        function triggerCascadeAnimationForHeader() {
+function triggerCascadeAnimationForHeader() {
             const icons = Array.from(document.querySelectorAll('.social-icon-header img'));
 
             icons.forEach((icon, index) => {
@@ -306,7 +345,7 @@ function shuffleArray(array) {
             }, (icons.length - 1) * 150 + 500);
         }
 
-        function randomizeFlashAnimationForHeader() {
+function randomizeFlashAnimationForHeader() {
             const icons = Array.from(document.querySelectorAll('.social-icon-header img'));
             const shuffledIcons = shuffleArray(icons);
 
@@ -316,7 +355,7 @@ function shuffleArray(array) {
             });
         }
 
-        function startFlashAnimationIntervalForHeader() {
+function startFlashAnimationIntervalForHeader() {
             setInterval(() => {
                 randomizeFlashAnimationForHeader();
             }, 7000);

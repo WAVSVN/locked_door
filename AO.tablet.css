@@ -12,12 +12,13 @@
     }
 
     .right-text {
-        font-size: 10px;
+        font-size: 13px;
         order: 2;
         animation-delay: 2s;
     }
 
     .left-text {
+        font-size: 13px;
         order: 1;
         animation-delay: 3s;
     }
