@@ -20,6 +20,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <div id="splash">
+        <div class="splash-content">
+            <!-- You can use a logo, animation, or simple text here -->
+            <img src="./image/ANOMALYONE_256color.gif" alt="Loading" class="splash-logo">
+            <p>Loading, please wait...</p>
+        </div>
+    </div>
     <header class="header">
         <div class="header-content">
             <img src="./image/ao_static.png" alt="Logo" class="logo">
@@ -205,9 +212,41 @@
     </body>
 
 <script>
+// JavaScript to handle splash screen and GIF reset
+document.addEventListener("DOMContentLoaded", function() {
+    const splash = document.getElementById('splash');
+    const splashGif = document.getElementById('splash-gif');
+    const mainContent = document.getElementById('main-content');
+
+    // Function to reset GIF by reassigning its src attribute
+    function resetGif(gifElement) {
+        const src = gifElement.src;
+        gifElement.src = ''; // Temporarily remove src
+        gifElement.offsetHeight; // Trigger reflow
+        gifElement.src = src; // Reassign the original src
+    }
+
+    // When the page has fully loaded, hide the splash screen
+    window.addEventListener("load", function() {
+        // Optional: Add a fade-out effect
+        splash.classList.add('fade-out');
+
+        // After the fade-out transition, hide the splash screen completely
+        setTimeout(() => {
+            splash.style.display = 'none';
+
+            // Show the main content
+            mainContent.style.display = 'block';
+        }, 500); // 500ms matches the CSS transition duration
+    });
+
+    // Reset GIF each time splash page is shown
+    resetGif(splashGif);
+});
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
 
+    // Function to hide/show the header on scroll
     window.addEventListener("scroll", function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const header = document.querySelector(".header");
@@ -220,8 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         lastScrollTop = scrollTop;
     });
-});
-document.addEventListener("DOMContentLoaded", function () {
+
     // Check if the device is mobile or tablet
     const isMobileOrTablet = window.innerWidth <= 1200;
 
@@ -229,14 +267,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const artistCells = document.querySelectorAll('.artist-cell');
 
     if (isMobileOrTablet) {
-        // Trigger only the social dock animations automatically on page load in a staggered fashion
+        // On mobile/tablet, initially trigger the social dock animations automatically
         artistCells.forEach((cell, index) => {
             setTimeout(() => {
                 triggerCascadeAnimation(cell);
-            }, index * 1300); // Adjust the delay (500ms) as needed for staggering
+            }, index * 1300); // Adjust the delay as needed for staggering
         });
+
+        // Set interval to repeatedly trigger staggered loading animation every 7 seconds
+        setInterval(() => {
+            triggerLoadingAnimationRandomly(artistCells);
+        }, 7000);
     } else {
-        // For desktop, retain hover and click behavior
+        // On desktop, attach hover and click event listeners
         artistCells.forEach(cell => {
             cell.dataset.glitchActive = "false";
 
@@ -248,47 +291,62 @@ document.addEventListener("DOMContentLoaded", function () {
                 resetCell(cell);
             });
 
-            // Remove the click functionality for mobile/tablet
             cell.addEventListener('click', () => {
                 triggerGlitchEffect(cell);
             });
         });
     }
 
-    // Header social media dock functionality remains the same
+    // Initialize header social media dock animations
     triggerCascadeAnimationForHeader();
 });
 
-// Existing functions remain unchanged
+// Function to shuffle an array (utility function)
 function shuffleArray(array) {
-    // Shuffle logic here
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
+// Function to trigger cascading animation for social icons
 function triggerCascadeAnimation(cell) {
     const icons = Array.from(cell.querySelectorAll('.social-icon'));
 
-    cell.querySelector('.social-dock').style.opacity = '1';
+    cell.querySelector('.social-dock').style.opacity = '1'; // Make social dock visible
 
     icons.forEach((icon, index) => {
         const delay = index * 0.03;
         icon.style.animation = `cascade-in 0.3s ${delay}s forwards`;
     });
 
+    // Cascade animation should only play once, remove this part from repeat
     setTimeout(() => {
         randomizeFlashAnimation(cell);
     }, (icons.length - 1) * 70 + 2);
 }
 
+// Function to randomize flash animation for social icons
 function randomizeFlashAnimation(cell) {
     const icons = Array.from(cell.querySelectorAll('.social-icon'));
     const shuffledIcons = shuffleArray(icons);
 
+    // Reset the animations before applying new ones
+    icons.forEach(icon => {
+        icon.style.animation = 'none'; // Reset animation
+    });
+
+    // Apply new animation
     shuffledIcons.forEach((icon, index) => {
         const delay = 0.1 * index;
-        icon.style.animation = `flash-in 0.2s ${delay}s forwards`;
+        setTimeout(() => {
+            icon.style.animation = `flash-in 0.2s ${delay}s forwards`;
+        }, delay * 1000); // Apply animation with delay
     });
 }
 
+// Function to trigger glitch effect (image swap) on hover/click
 function triggerGlitchEffect(cell) {
     const originalImage = cell.querySelector('.artist-image');
     const hoverImage = cell.querySelector('.artist-hover-image');
@@ -309,6 +367,7 @@ function triggerGlitchEffect(cell) {
     }
 }
 
+// Function to reset the cell state on mouse leave
 function resetCell(cell) {
     const originalImage = cell.querySelector('.artist-image');
     const hoverImage = cell.querySelector('.artist-hover-image');
@@ -317,14 +376,28 @@ function resetCell(cell) {
 
     hoverImage.style.opacity = '0';
     originalImage.style.opacity = '1';
-    socialDock.style.opacity = '0';
+    socialDock.style.opacity = '1'; // Ensure social dock is visible when not animating
     icons.forEach(icon => {
-        icon.style.opacity = '0';
+        icon.style.opacity = '1'; // Keep icons visible
         icon.style.animation = 'none';
     });
     cell.dataset.glitchActive = "false";
 }
 
+// Function to trigger staggered loading animation randomly on mobile devices
+function triggerLoadingAnimationRandomly(cells) {
+    const shuffledCells = shuffleArray(Array.from(cells)); // Shuffle cells for random order
+    shuffledCells.forEach((cell, index) => {
+        setTimeout(() => {
+            if (window.innerWidth <= 1200) { // Ensure it's still a mobile device
+                resetCell(cell); // Ensure the icons are visible before the animation
+                randomizeFlashAnimation(cell); // Only trigger the loading flash animation
+            }
+        }, Math.random() * 3000); // Random delay between 0 and 3000ms
+    });
+}
+
+// Function to trigger cascading animation for header social icons
 function triggerCascadeAnimationForHeader() {
     const icons = Array.from(document.querySelectorAll('.social-icon-header img'));
 
@@ -339,6 +412,7 @@ function triggerCascadeAnimationForHeader() {
     }, (icons.length - 1) * 150 + 500);
 }
 
+// Function to randomize flash animation for header social icons
 function randomizeFlashAnimationForHeader() {
     const icons = Array.from(document.querySelectorAll('.social-icon-header img'));
     const shuffledIcons = shuffleArray(icons);
@@ -349,11 +423,20 @@ function randomizeFlashAnimationForHeader() {
     });
 }
 
+// Function to start flash animation interval for header icons
 function startFlashAnimationIntervalForHeader() {
     setInterval(() => {
         randomizeFlashAnimationForHeader();
     }, 7000);
 }
+
+// Initialize text animation after a delay
+document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+        const animatedText = document.getElementById('animatedText');
+        animatedText.style.display = 'block'; // Make text visible after delay
+    }, 2000); // 2 seconds delay
+});
 
 
 
