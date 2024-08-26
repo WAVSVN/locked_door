@@ -17,21 +17,26 @@
         align-items: center;
         justify-content: center;
     }
-    .artist-image,
-.artist-hover-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
 
-}
-    .artist-image,
+    .artist-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+    }
+
     .artist-hover-image {
-        height: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0; /* Ensure hover image is hidden initially */
+        transition: opacity 0.5s ease-in-out; /* Add transition if missing */
     }
 
     .social-dock {
@@ -46,4 +51,3 @@
         height: 40px;
     }
 }
-
