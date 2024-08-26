@@ -206,6 +206,22 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const header = document.querySelector(".header");
+
+        if (scrollTop > lastScrollTop) {
+            header.style.top = "-100px"; // Hide header when scrolling down
+        } else {
+            header.style.top = "0"; // Show header when scrolling up
+        }
+
+        lastScrollTop = scrollTop;
+    });
+});
+document.addEventListener("DOMContentLoaded", function () {
     // Check if the device is mobile or tablet
     const isMobileOrTablet = window.innerWidth <= 1200;
 
