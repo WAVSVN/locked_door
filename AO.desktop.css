@@ -126,6 +126,8 @@ body {
     aspect-ratio: 0.84 / 1;
     box-sizing: border-box;
     overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Image Styling */
@@ -139,6 +141,7 @@ body {
     left: 0;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
+
 }
 
 .artist-hover-image {

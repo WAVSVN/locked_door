@@ -1,5 +1,18 @@
 /* Responsive adjustments for medium screens */
 @media (max-width: 1200px) {
+
+    .artist-image,
+.artist-hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+
+}
     .left-text,
     .right-text {
         position: static;
