@@ -1,5 +1,5 @@
 /* Responsive adjustments for smaller screens */
-@media (max-width: 560px) {
+@media (max-width: 400px) {
     .artist-grid {
         display: flex;
         flex-wrap: wrap;
