@@ -45,6 +45,16 @@
 
     .social-icon img {
         max-width: 30px;
+        filter: saturate(0%);
+        filter: brightness(10000%);
+
+
+    }
+
+    .social-icon img:hover {
+        max-width: 30px;
+        filter: brightness(100%);
+
     }
 
     .logo {
