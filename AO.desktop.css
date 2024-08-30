@@ -135,8 +135,8 @@ body {
     transform: translateX(-1px);
     animation: none;
     display: flex;
-    filter: brightness(10000%);
     filter: saturate(0%);
+    filter: brightness(10000%);
     transition: filter 0.3s ease;
 }
 .social-icon-header img:hover {
@@ -220,8 +220,9 @@ body {
     width: 100%;
     height: auto;
     max-width: 50px;
+    filter: saturate(0%);
     filter: brightness(10000%);
-    filter:saturate(0%);
+
     transition: filter 0.3s ease;
 
 }
