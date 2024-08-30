@@ -135,8 +135,12 @@ body {
     transform: translateX(-1px);
     animation: none;
     display: flex;
+    filter: brightness(1000%);
+    transition: filter 0.3s ease;
 }
-
+.social-icon-header img:hover {
+    filter: brightness(100%);
+}
 /* Artist grid container */
 .artist-grid {
     display: flex;
@@ -215,7 +219,19 @@ body {
     width: 100%;
     height: auto;
     max-width: 50px;
+    filter: brightness(1000%);
+    transition: filter 0.3s ease;
+
 }
+
+.social-icon img:hover {
+    width: 100%;
+    height: auto;
+    max-width: 50px;
+    filter: brightness(100%);
+
+}
+
 
 /* Footer styling */
     .footer {
