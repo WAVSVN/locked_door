@@ -135,12 +135,10 @@ body {
     transform: translateX(-1px);
     animation: none;
     display: flex;
-    filter: saturate(0%);
-    filter: brightness(10000%);
-    transition: filter 0.3s ease;
+    filter: brightness(0) invert(1);
 }
 .social-icon-header img:hover {
-    filter: brightness(100%);
+    filter: brightness(1) invert(0);
 }
 /* Artist grid container */
 .artist-grid {
@@ -220,19 +218,19 @@ body {
     width: 100%;
     height: auto;
     max-width: 50px;
-    filter: saturate(0%);
-    filter: brightness(10000%);
+
+    filter: brightness(0) invert(1);
 
     transition: filter 0.3s ease;
 
 }
 
 .social-icon img:hover {
+
     width: 100%;
     height: auto;
     max-width: 50px;
-    filter: brightness(100%);
-
+    filter: brightness(1) invert(0);
 }
 
 
