@@ -214,7 +214,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const splash = document.getElementById('splash');
     const splashGif = document.querySelector('.splash-logo'); // Updated to select the correct GIF element
-    const mainContent = document.getElementById('main-content');
+    const mainContent = document.getElementById('main-content'); // Ensure main-content exists in your HTML
 
     // Function to reset GIF by reassigning its src attribute with a unique query string
     function resetGif(gifElement) {
@@ -229,12 +229,10 @@ document.addEventListener("DOMContentLoaded", function() {
         // Optional: Add a fade-out effect
         splash.classList.add('fade-out');
 
-        // After the fade-out transition, hide the splash screen completely
+        // After the fade-out transition, hide the splash screen completely and show main content
         setTimeout(() => {
             splash.style.display = 'none';
-
-            // Show the main content
-            mainContent.style.display = 'block';
+            mainContent.style.display = 'block';  // Ensure main-content is displayed
         }, 500); // 500ms matches the CSS transition duration
     }, 1300); // Ensure the splash screen stays for 2 seconds
 
