@@ -66,9 +66,39 @@
         <a href="https://open.spotify.com/artist/7dzM8rBjimBLgsQ9pfZIXO?si=3w91NNIGToacnK7NoOJoVA" target="_blank" class="social-icon"><img src="./social/spotify.svg" alt="Spotify"></a>
         <a href="https://soundcloud.com/speakerhoney" target="_blank" class="social-icon"><img src="./social/soundcloud.svg" alt="Soundcloud"></a>
     </div>
+ </div>
+ <div id="artistPopup" class="popup hidden">
+    <div class="popup-content">
+        <a href="#" class="close-popup">X</a>
+
+        <!-- Top section: Logo and text side by side -->
+        <div class="popup-top">
+            <div class="popup-logo">
+                <img src="" alt="Artist Logo" id="popupLogo">
+            </div>
+            <div class="popup-markdown" id="popupMarkdown">
+                <!-- Markdown content will be injected here -->
+            </div>
+        </div>
+
+        <!-- Middle section: Two images side by side -->
+        <div class="popup-images" id="popupImages">
+            <!-- Images will be injected here -->
+        </div>
+
+        <!-- Bottom section: SoundCloud embed -->
+        <div class="popup-music">
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" id="popupMusicPlayer"></iframe>
+            <div id="soundCloudCredits" style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+                <!-- Credits go here -->
+            </div>
+        </div>
+
+
+
+
+    </div>
 </div>
-
-
 
 
 <!--AMAGII -->
@@ -104,6 +134,7 @@
         <a href="https://soundcloud.com/incvrn8" target="_blank" class="social-icon"><img src="./social/soundcloud.svg" alt="Soundcloud"></a>
     </div>
 </div>
+
 
 
 
@@ -235,8 +266,7 @@ document.addEventListener("DOMContentLoaded", function() {
             mainContent.style.display = 'block';  // Ensure main-content is displayed
         }, 500); // 500ms matches the CSS transition duration
     }, 1300); // Ensure the splash screen stays for 2 seconds
-
-    // Reset GIF each time splash page is shown
+f    // Reset GIF each time splash page is shown
     resetGif(splashGif); // Correctly reset the GIF when splash screen is shown
 });
 
@@ -435,7 +465,124 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 2000); // 2 seconds delay
 });
 
+    // Function to open the popup and load content dynamically
+    function openArtistPopup(logoSrc, markdownContent, images, musicSrc, musicCredits) {
+        const popup = document.getElementById('artistPopup');
+        const popupLogo = document.getElementById('popupLogo');
+        const popupMarkdown = document.getElementById('popupMarkdown');
+        const popupImages = document.getElementById('popupImages');
+        const popupMusicPlayer = document.getElementById('popupMusicPlayer');
+        const soundCloudCredits = document.getElementById('soundCloudCredits');
 
+        // Set the popup content
+        popupLogo.src = logoSrc;
+        popupMarkdown.textContent = markdownContent;
+
+        // Clear and load new images
+        popupImages.innerHTML = ''; // Clear existing images
+        images.forEach(imageSrc => {
+            const imgElement = document.createElement('img');
+            imgElement.src = imageSrc;
+            imgElement.alt = 'Artist Image';
+            popupImages.appendChild(imgElement);
+        });
+
+        // Set the music iframe source
+        popupMusicPlayer.src = musicSrc;
+
+        // Set the credits below the iframe
+        soundCloudCredits.innerHTML = musicCredits;
+
+        // Show the popup
+        popup.classList.remove('hidden');
+    }
+
+    // Event listener to close the popup when clicking on the close button
+    document.querySelector('.close-popup').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('artistPopup').classList.add('hidden');
+    });
+
+    // Event listener to close the popup when clicking outside of the popup content
+    document.getElementById('artistPopup').addEventListener('click', function(event) {
+        const popupContent = document.querySelector('.popup-content');
+        if (!popupContent.contains(event.target)) {
+            document.getElementById('artistPopup').classList.add('hidden');
+        }
+    });
+
+    // Assign unique content to each artist cell
+   // Data for each artist (logo, markdown, images, music, credits)
+const artistsData = [
+    {
+        logo: './image/SPEAKER_HONEY_STACKED-WHITE.png',
+        markdown: '\nLorem ipsum odor amet, consectetuer adipiscing elit. Penatibus tempor etiam amet vivamus blandit mattis, adipiscing senectus. Neque viverra congue fringilla hac neque class lacus. Posuere sagittis gravida interdum morbi feugiat bibendum euismod. Sem dolor ante tristique sodales risus sed nascetur. Pharetra vel maximus purus ut eget donec. Montes dui quisque ex ligula non libero, donec hac ullamcorper. Ornare est ligula euismod, ullamcorper accumsan sit. Suscipit consectetur facilisis ad vulputate at orci semper per.',
+        images: ['./image/speaker1.jpg', './image/speaker2.jpg'],
+        music: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910235875&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        credits: `<a href="https://soundcloud.com/speakerhoney" title="Speaker Honey" target="_blank" style="color: #cccccc; text-decoration: none;">Speaker Honey</a> ·
+        <a href="https://soundcloud.com/speakerhoney/so-mad-speaker-honey-original-mix" title="SO MAD - Speaker Honey (Original Mix)" target="_blank" style="color: #cccccc; text-decoration: none;">SO MAD - Speaker Honey (Original Mix)</a>`
+    },
+    {
+    logo: './image/AMAGII_logo orange.png', // Artist logo
+    markdown: '\n“Amagi” - the oldest known word for freedom - is exactly what AMAGIIs mission is in the music realm. AMAGII - a US-based producer who is bringing a fresh and aggressive sound to the techno scene who wants his audience to have a sense of release and freedom in all aspects. Music is an escape and AMAGII will bring you through an era of nostalgia with old school 80s/90s dance sounds, blended with modern day energy that will give the crowd the dopamine rush they all desire.',
+    images: ['./image/speaker1.jpg', './image/speaker2.jpg'],
+    music: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1789514175&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true', // SoundCloud embed URL
+    credits: `<a href="https://soundcloud.com/itsamagii" title="AMAGII" target="_blank" style="color: #cccccc; text-decoration: none;">AMAGII</a> ·
+    <a href="https://soundcloud.com/itsamagii/sets/crossing-lines-w-reaper" title="CROSSING LINES W/ REAPER" target="_blank" style="color: #cccccc; text-decoration: none;">CROSSING LINES W/ REAPER</a>` // SoundCloud credits
+    }
+];
+
+// Function to open the popup and load content dynamically
+function openArtistPopup(artistData) {
+    const popup = document.getElementById('artistPopup');
+    const popupLogo = document.getElementById('popupLogo');
+    const popupMarkdown = document.getElementById('popupMarkdown');
+    const popupImages = document.getElementById('popupImages');
+    const popupMusicPlayer = document.getElementById('popupMusicPlayer');
+    const soundCloudCredits = document.getElementById('soundCloudCredits');
+
+    // Set the popup content
+    popupLogo.src = artistData.logo;
+    popupMarkdown.innerHTML = artistData.markdown;
+
+    // Clear and load new images
+    popupImages.innerHTML = ''; // Clear existing images
+    artistData.images.forEach(imageSrc => {
+        const imgElement = document.createElement('img');
+        imgElement.src = imageSrc;
+        imgElement.alt = 'Artist Image';
+        popupImages.appendChild(imgElement);
+    });
+
+    // Set the music iframe source
+    popupMusicPlayer.src = artistData.music;
+
+    // Set the credits below the iframe
+    soundCloudCredits.innerHTML = artistData.credits;
+
+    // Show the popup
+    popup.classList.remove('hidden');
+}
+
+// Add event listeners to each artist cell
+document.querySelectorAll('.artist-cell').forEach((cell, index) => {
+    cell.addEventListener('click', function(event) {
+        // Prevent the popup from triggering if a social icon is clicked
+        if (event.target.closest('.social-icon')) {
+            return; // Do nothing if a social icon is clicked
+        }
+
+        // Check if the artist data exists for the clicked cell
+        const artistData = artistsData[index];
+        if (artistData) {
+            openArtistPopup(artistData);
+        }
+    });
+});
+
+
+            // Add more artist conditions as needed
 
 </script>
+
 </html>

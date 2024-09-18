@@ -370,3 +370,97 @@ body {
         opacity: 1;
     }
 }
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1200px; /* Box width set to 1200px */
+    width: 100%;
+    text-align: center;
+    color: white;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.popup-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.popup-logo {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.popup-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.popup-markdown {
+    flex: 2; /* Markdown text takes up more space */
+    white-space: normal;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    padding: 40px;
+    font-family: monospace;
+    font-size: 20px;
+    letter-spacing: 0.2em;
+}
+
+.popup-images {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.popup-images img {
+    max-width: 49%; /* Two images side by side */
+    height: auto;
+}
+
+.popup-music iframe {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.popup-content .popup-element {
+    opacity: 0;
+    transform: translateY(20px); /* Elements are slightly shifted down initially */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Visible state with animation */
+.popup-content .popup-element.animate-in {
+    opacity: 1;
+    transform: translateY(0); /* Move back to original position */
+}
