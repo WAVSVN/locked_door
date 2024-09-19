@@ -71,6 +71,7 @@
         background-color: #000000;
         opacity: 90%;
         z-index: 1000;
+        margin-top: 20px;
     }
 
     .popup-content {
@@ -105,7 +106,7 @@
     .popup-markdown {
         font-size: 7px; /* Smaller text on mobile */
         padding: 15px;
-        color: red;
+        color: rgb(255, 255, 255);
         letter-spacing: 0.1em;
         text-align: left; /* Center text for mobile */
     }
