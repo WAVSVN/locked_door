@@ -272,15 +272,17 @@ f    // Reset GIF each time splash page is shown
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
 
-    // Function to hide/show the header on scroll
+    // Function to hide/show the header based on scroll position
     window.addEventListener("scroll", function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         const header = document.querySelector(".header");
 
         if (scrollTop > lastScrollTop) {
-            header.style.top = "-200px"; // Hide header when scrolling down
-        } else {
-            header.style.top = "0"; // Show header when scrolling up
+            // Hide the header when scrolling down
+            header.style.top = "-200px";
+        } else if (scrollTop === 0) {
+            // Only show the header when scrolled back to the top
+            header.style.top = "0";
         }
 
         lastScrollTop = scrollTop;
