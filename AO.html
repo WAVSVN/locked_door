@@ -81,22 +81,21 @@
             </div>
         </div>
 
-        <!-- Middle section: Two images side by side -->
-        <div class="popup-images" id="popupImages">
-            <!-- Images will be injected here -->
-        </div>
 
-        <!-- Bottom section: SoundCloud embed -->
+        <!-- Bottom section: SoundCloud embeds -->
         <div class="popup-music">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" id="popupMusicPlayer"></iframe>
-            <div id="soundCloudCredits" style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
-                <!-- Credits go here -->
+            <!-- First SoundCloud embed -->
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" id="popupMusicPlayer1"></iframe>
+            <div id="soundCloudCredits1" style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+                <!-- First credits go here -->
+            </div>
+
+            <!-- Second SoundCloud embed -->
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" id="popupMusicPlayer2"></iframe>
+            <div id="soundCloudCredits2" style="font-size: 10px; color: #cccccc; line-break: anywhere; word-break: normal; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif; font-weight: 100;">
+                <!-- Second credits go here -->
             </div>
         </div>
-
-
-
-
     </div>
 </div>
 
@@ -145,7 +144,7 @@
 <div class="artist-cell" onmouseover="swapImage(this, true)" onmouseout="swapImage(this, false)" onclick="toggleImage(this)">
     <img src="./image/photo-output.jpeg" alt="Artist Image" class="artist-image">
     <img src="./image/AVENUEplaceholder.png" alt="Artist Hover Image" class="artist-hover-image">
-    <img src="./image/Asset 1@3x.png" alt="Artist Logo" class="artist-logo">
+    <img src="./image/AVENUE_white_transparent.png" alt="Artist Logo" class="artist-logo">
     <div class="social-dock">
         <a href="https://www.instagram.com/avenuepnw" target="_blank" class="social-icon"><img src="./social/instagram.svg" alt="Instagram"></a>
         <a href="https://x.com/avenuepnw" target="_blank" class="social-icon"><img src="./social/x.svg" alt="Twitter"></a>
@@ -514,21 +513,109 @@ document.addEventListener("DOMContentLoaded", function() {
     // Assign unique content to each artist cell
    // Data for each artist (logo, markdown, images, music, credits)
 const artistsData = [
-    {
+{
         logo: './image/SPEAKER_HONEY_STACKED-WHITE.png',
-        markdown: '\nLorem ipsum odor amet, consectetuer adipiscing elit. Penatibus tempor etiam amet vivamus blandit mattis, adipiscing senectus. Neque viverra congue fringilla hac neque class lacus. Posuere sagittis gravida interdum morbi feugiat bibendum euismod. Sem dolor ante tristique sodales risus sed nascetur. Pharetra vel maximus purus ut eget donec. Montes dui quisque ex ligula non libero, donec hac ullamcorper. Ornare est ligula euismod, ullamcorper accumsan sit. Suscipit consectetur facilisis ad vulputate at orci semper per.',
-        images: ['./image/speaker1.jpg', './image/speaker2.jpg'],
-        music: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910235875&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
-        credits: `<a href="https://soundcloud.com/speakerhoney" title="Speaker Honey" target="_blank" style="color: #cccccc; text-decoration: none;">Speaker Honey</a> ·
-        <a href="https://soundcloud.com/speakerhoney/so-mad-speaker-honey-original-mix" title="SO MAD - Speaker Honey (Original Mix)" target="_blank" style="color: #cccccc; text-decoration: none;">SO MAD - Speaker Honey (Original Mix)</a>`
+        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        music: [
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1910235875&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1889032392&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+        ],
+        credits: [
+            `<a href="https://soundcloud.com/speakerhoney" title="Speaker Honey" target="_blank" style="color: #cccccc; text-decoration: none;">Speaker Honey</a> ·
+            <a href="https://soundcloud.com/speakerhoney/so-mad-speaker-honey-original-mix" title="SO MAD - Speaker Honey (Original Mix)" target="_blank" style="color: #cccccc; text-decoration: none;">SO MAD - Speaker Honey (Original Mix)</a>`,
+            `<a href="https://soundcloud.com/speakerhoney" title="Speaker Honey" target="_blank" style="color: #cccccc; text-decoration: none;">Speaker Honey</a> ·
+            <a href="https://soundcloud.com/speakerhoney/speaker-honey-riverside-studios-x-techno-2024-rave-mix" title="Speaker Honey - Live at Feststaal Kreuzberg, Berlin (2024)" target="_blank" style="color: #cccccc; text-decoration: none;">Speaker Honey - Live at Feststaal Kreuzberg, Berlin (2024)</a>`
+        ]
     },
     {
-    logo: './image/AMAGII_logo orange.png', // Artist logo
-    markdown: '\n“Amagi” - the oldest known word for freedom - is exactly what AMAGIIs mission is in the music realm. AMAGII - a US-based producer who is bringing a fresh and aggressive sound to the techno scene who wants his audience to have a sense of release and freedom in all aspects. Music is an escape and AMAGII will bring you through an era of nostalgia with old school 80s/90s dance sounds, blended with modern day energy that will give the crowd the dopamine rush they all desire.',
-    images: ['./image/speaker1.jpg', './image/speaker2.jpg'],
-    music: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1789514175&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true', // SoundCloud embed URL
-    credits: `<a href="https://soundcloud.com/itsamagii" title="AMAGII" target="_blank" style="color: #cccccc; text-decoration: none;">AMAGII</a> ·
-    <a href="https://soundcloud.com/itsamagii/sets/crossing-lines-w-reaper" title="CROSSING LINES W/ REAPER" target="_blank" style="color: #cccccc; text-decoration: none;">CROSSING LINES W/ REAPER</a>` // SoundCloud credits
+        logo: './image/AMAGII_logo orange.png', // AMAGII logo
+        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        music: [
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1789514175&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1581191017&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+        ],
+        credits: [
+            `<a href="https://soundcloud.com/itsamagii" title="AMAGII" target="_blank" style="color: #cccccc; text-decoration: none;">AMAGII</a> ·
+            <a href="https://soundcloud.com/itsamagii/sets/crossing-lines-w-reaper" title="CROSSING LINES W/ REAPER" target="_blank" style="color: #cccccc; text-decoration: none;">CROSSING LINES W/ REAPER</a>`,
+            `<a href="https://soundcloud.com/itsamagii" title="AMAGII" target="_blank" style="color: #cccccc; text-decoration: none;">AMAGII</a> ·
+            <a href="https://soundcloud.com/itsamagii/sets/amagii-dont-stop" title="AMAGII - DONT STOP" target="_blank" style="color: #cccccc; text-decoration: none;">AMAGII - DONT STOP</a>`
+        ]
+    },
+    {
+        logo: './image/INCVRN8-TEXTLOGO1.png', // INCVRN8 Artist Logo
+        markdown: '\nwe are but a concept',
+        music: [
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1720448103&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true', // First SoundCloud embed URL
+            'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1903892798&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true' // Second SoundCloud embed URL
+        ],
+        credits: [
+            `<a href="https://soundcloud.com/incvrn8" title="INCVRN8" target="_blank" style="color: #cccccc; text-decoration: none;">INCVRN8</a> ·
+            <a href="https://soundcloud.com/incvrn8/void" title="Void" target="_blank" style="color: #cccccc; text-decoration: none;">Void</a>`,
+            `<a href="https://soundcloud.com/incvrn8" title="INCVRN8" target="_blank" style="color: #cccccc; text-decoration: none;">INCVRN8</a> ·
+            <a href="https://soundcloud.com/incvrn8/1k-1" title="1k" target="_blank" style="color: #cccccc; text-decoration: none;">1k</a>`
+        ] // Credits for both tracks
+    },
+    {
+        logo: './image/AVENUE_white_transparent.png', // AVENUE logo
+        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        music: [
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1868890466&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1846056990&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+    ],
+        credits: [
+        `<a href="https://soundcloud.com/avenueofficial" title="AVENUE" target="_blank" style="color: #cccccc; text-decoration: none;">AVENUE</a> ·
+        <a href="https://soundcloud.com/avenueofficial/sets/when-youre-gone-w-dyce-future" title="When You&#x27;re Gone w/ DYCE (Future Cuts)" target="_blank" style="color: #cccccc; text-decoration: none;">When You&#x27;re Gone w/ DYCE (Future Cuts)</a>`,
+        `<a href="https://soundcloud.com/avenueofficial" title="AVENUE" target="_blank" style="color: #cccccc; text-decoration: none;">AVENUE</a> ·
+        <a href="https://soundcloud.com/avenueofficial/daft-punk-doin-it-right-avenue" title="Daft Punk - Doin&#x27; It Right (AVENUE REMIX)" target="_blank" style="color: #cccccc; text-decoration: none;">Daft Punk - Doin&#x27; It Right (AVENUE REMIX)</a>`
+    ]
+    },
+    {
+        logo: './image/red_noise.png', // DOOM logo
+        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        music: [
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1901028729&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1851738009&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+    ],
+        credits: [
+        `<a href="https://soundcloud.com/doom_us" title="Doom" target="_blank" style="color: #cccccc; text-decoration: none;">Doom</a> ·
+        <a href="https://soundcloud.com/doom_us/viva-la-vida" title="Viva La ViDa" target="_blank" style="color: #cccccc; text-decoration: none;">Viva La ViDa</a>`,
+        `<a href="https://soundcloud.com/doom_us" title="Doom" target="_blank" style="color: #cccccc; text-decoration: none;">Doom</a> ·
+        <a href="https://soundcloud.com/doom_us/doom-closer-jan24" title="Doom Closer Jan24" target="_blank" style="color: #cccccc; text-decoration: none;">Doom Closer Jan24</a>`
+    ]
+    },
+    {
+        logo: './image/DANIELP-TXTLOGO.png', // Daniel Palomera logo
+        markdown: `Daniel Palomera is known for his powerful live performances and evocative productions. His music is a blend of deep emotional soundscapes and energetic beats, taking listeners on a journey through his unique sonic vision.`,
+        music: [
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1506101467&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1899693465&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+    ],
+        credits: [
+        `<a href="https://soundcloud.com/danielpalomera" title="Daniel Palomera" target="_blank" style="color: #cccccc; text-decoration: none;">Daniel Palomera</a> ·
+        <a href="https://soundcloud.com/danielpalomera/fall-1" title="Fall" target="_blank" style="color: #cccccc; text-decoration: none;">Fall</a>`,
+        `<a href="https://soundcloud.com/danielpalomera" title="Daniel Palomera" target="_blank" style="color: #cccccc; text-decoration: none;">Daniel Palomera</a> ·
+        <a href="https://soundcloud.com/danielpalomera/live-beeshouse-081524" title="LIVE @Beeshouse Santa Ana 08/15/24" target="_blank" style="color: #cccccc; text-decoration: none;">LIVE @Beeshouse Santa Ana 08/15/24</a>`
+    ]
+    },
+    {
+        logo: './image/1800NLF_logo_white.png', // NoelleFreak logo
+        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        music: [
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1791654619&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true',
+        'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1791654619&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true'
+    ],
+        credits: [
+        `<a href="https://soundcloud.com/noel-x-125470784" title="NOEL LE FREAK" target="_blank" style="color: #cccccc; text-decoration: none;">NOEL LE FREAK</a> ·
+        <a href="https://soundcloud.com/noel-x-125470784/mean-girls-club330set" title="MEAN GIRLS CLUB[3.30]SET" target="_blank" style="color: #cccccc; text-decoration: none;">MEAN GIRLS CLUB[3.30]SET</a>`,
+        `<a href="https://soundcloud.com/noel-x-125470784" title="NOEL LE FREAK" target="_blank" style="color: #cccccc; text-decoration: none;">NOEL LE FREAK</a> ·
+        <a href="https://soundcloud.com/noel-x-125470784/mean-girls-club330set" title="MEAN GIRLS CLUB[3.30]SET" target="_blank" style="color: #cccccc; text-decoration: none;">MEAN GIRLS CLUB[3.30]SET</a>`
+    ]
+    },
+    {
+        logo: './image/k.ko_logo.png', // Kelsey Ko logo
+        markdown: `Kelsey Ko is a multidisciplinary artist and designer who blends vibrant colors and bold patterns to create a unique visual experience. Known for her stunning artwork and creative designs, Kelsey Ko continues to push boundaries in the world of contemporary art.`,
+        music: [], // No SoundCloud embeds for Kelsey Ko
+        credits: [] // No SoundCloud credits
     }
 ];
 
@@ -537,28 +624,28 @@ function openArtistPopup(artistData) {
     const popup = document.getElementById('artistPopup');
     const popupLogo = document.getElementById('popupLogo');
     const popupMarkdown = document.getElementById('popupMarkdown');
-    const popupImages = document.getElementById('popupImages');
-    const popupMusicPlayer = document.getElementById('popupMusicPlayer');
-    const soundCloudCredits = document.getElementById('soundCloudCredits');
+
+    // For loading multiple SoundCloud embeds
+    const popupMusicPlayer1 = document.getElementById('popupMusicPlayer1');
+    const soundCloudCredits1 = document.getElementById('soundCloudCredits1');
+    const popupMusicPlayer2 = document.getElementById('popupMusicPlayer2');
+    const soundCloudCredits2 = document.getElementById('soundCloudCredits2');
 
     // Set the popup content
     popupLogo.src = artistData.logo;
     popupMarkdown.innerHTML = artistData.markdown;
 
-    // Clear and load new images
-    popupImages.innerHTML = ''; // Clear existing images
-    artistData.images.forEach(imageSrc => {
-        const imgElement = document.createElement('img');
-        imgElement.src = imageSrc;
-        imgElement.alt = 'Artist Image';
-        popupImages.appendChild(imgElement);
-    });
+    // Set the first music iframe source and credits
+    if (artistData.music[0] && artistData.credits[0]) {
+        popupMusicPlayer1.src = artistData.music[0];
+        soundCloudCredits1.innerHTML = artistData.credits[0];
+    }
 
-    // Set the music iframe source
-    popupMusicPlayer.src = artistData.music;
-
-    // Set the credits below the iframe
-    soundCloudCredits.innerHTML = artistData.credits;
+    // Set the second music iframe source and credits (if available)
+    if (artistData.music[1] && artistData.credits[1]) {
+        popupMusicPlayer2.src = artistData.music[1];
+        soundCloudCredits2.innerHTML = artistData.credits[1];
+    }
 
     // Show the popup
     popup.classList.remove('hidden');
@@ -579,7 +666,6 @@ document.querySelectorAll('.artist-cell').forEach((cell, index) => {
         }
     });
 });
-
 
             // Add more artist conditions as needed
 

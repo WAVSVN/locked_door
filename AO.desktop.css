@@ -379,7 +379,8 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8);
+    background-color: #000000;
+    opacity: 90%;
     z-index: 1000;
 }
 
@@ -388,7 +389,7 @@ body {
 }
 
 .popup-content {
-    background-color: #111;
+    background-color: #000000;
     padding: 20px;
     border-radius: 10px;
     max-width: 1200px; /* Box width set to 1200px */

@@ -59,4 +59,92 @@
     .logo {
         height: 40px;
     }
+    .popup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000;
+        opacity: 90%;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background-color: #000000;
+        padding: 15px;
+        border-radius: 10px;
+        width: 95%; /* Adjusted for mobile screen */
+        max-width: none; /* Remove max-width constraint */
+        text-align: center;
+        color: white;
+        position: relative;
+        box-sizing: border-box;
+        overflow-y: auto; /* Allow scrolling if content exceeds the screen */
+    }
+
+    /* Adjust the top section layout for mobile */
+    .popup-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .popup-logo {
+        padding-right: 0;
+    }
+
+    .popup-logo img {
+        max-width: 80%; /* Resize for mobile */
+        margin-bottom: 10px;
+    }
+
+    .popup-markdown {
+        font-size: 16px; /* Smaller text on mobile */
+        padding: 15px;
+        letter-spacing: 0.1em;
+        text-align: center; /* Center text for mobile */
+    }
+
+    /* Stack images vertically on mobile */
+    .popup-images {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .popup-images img {
+        max-width: 100%; /* Full-width images for mobile */
+        margin-bottom: 10px;
+    }
+
+    /* Make the SoundCloud player responsive */
+    .popup-music iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust the close button for mobile */
+    .close-popup {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 18px;
+    }
+
+    /* Animation for popup elements */
+    .popup-content .popup-element {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .popup-content .popup-element.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
