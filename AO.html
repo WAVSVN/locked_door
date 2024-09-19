@@ -653,6 +653,32 @@ function openArtistPopup(artistData) {
     popup.classList.remove('hidden');
 }
 
+// Function to close the popup and unload SoundCloud embeds
+function closeArtistPopup() {
+    const popup = document.getElementById('artistPopup');
+
+    // Unload SoundCloud embeds by resetting the iframe src
+    document.getElementById('popupMusicPlayer1').src = '';
+    document.getElementById('popupMusicPlayer2').src = '';
+
+    // Hide the popup
+    popup.classList.add('hidden');
+}
+
+// Event listener to close the popup when clicking on the close button
+document.querySelector('.close-popup').addEventListener('click', function(event) {
+    event.preventDefault();
+    closeArtistPopup();  // Use the closeArtistPopup function
+});
+
+// Event listener to close the popup when clicking outside of the popup content
+document.getElementById('artistPopup').addEventListener('click', function(event) {
+    const popupContent = document.querySelector('.popup-content');
+    if (!popupContent.contains(event.target)) {
+        closeArtistPopup();  // Use the closeArtistPopup function
+    }
+});
+
 // Add event listeners to each artist cell
 document.querySelectorAll('.artist-cell').forEach((cell, index) => {
     cell.addEventListener('click', function(event) {
