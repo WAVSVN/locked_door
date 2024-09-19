@@ -107,7 +107,7 @@
         padding: 15px;
         color: red;
         letter-spacing: 0.1em;
-        text-align: center; /* Center text for mobile */
+        text-align: left; /* Center text for mobile */
     }
 
     /* Stack images vertically on mobile */
