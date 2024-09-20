@@ -105,7 +105,7 @@
 <div class="artist-cell" onmouseover="swapImage(this, true)" onmouseout="swapImage(this, false)" onclick="toggleImage(this)">
     <img src="./image/amagiiphoto.jpeg" alt="Artist Image" class="artist-image">
     <img src="./image/AMAGIIplaceholder2.png" alt="Artist Hover Image" class="artist-hover-image">
-    <img src="./image/AMAGII_logo orange.png" alt="Artist Logo" class="artist-logo">
+    <img src="./image/AMAGII_logo orange.png" alt="Artist Logo" class="artist-logo">ve
     <div class="social-dock">
         <a href="https://www.instagram.com/itsamagii" target="_blank" class="social-icon"><img src="./social/instagram.svg" alt="Instagram"></a>
         <a href="https://www.x.com/itsamagii" target="_blank" class="social-icon"><img src="./social/x.svg" alt="Twitter"></a>
@@ -271,22 +271,22 @@ f    // Reset GIF each time splash page is shown
 
 document.addEventListener("DOMContentLoaded", function () {
     let lastScrollTop = 0;
+    const header = document.querySelector(".header");
 
-    // Function to hide/show the header based on scroll position
     window.addEventListener("scroll", function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const header = document.querySelector(".header");
 
         if (scrollTop > lastScrollTop) {
             // Hide the header when scrolling down
             header.style.top = "-200px";
         } else if (scrollTop === 0) {
-            // Only show the header when scrolled back to the top
+            // Show the header only when at the top of the page
             header.style.top = "0";
         }
 
         lastScrollTop = scrollTop;
-    });
+    }, { passive: true }); // Use passive to improve scroll performance on mobile
+});
 
     // Check if the device is mobile or tablet
     const isMobileOrTablet = window.innerWidth <= 1200;
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Initialize header social media dock animations
     triggerCascadeAnimationForHeader();
-});
+
 
 // Function to shuffle an array (utility function)
 function shuffleArray(array) {
@@ -612,7 +612,7 @@ const artistsData = [
     },
     {
         logo: './image/k.ko_logo.png', // Kelsey Ko logo
-        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+        markdown: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
         music: [], // No SoundCloud embeds for Kelsey Ko
         credits: [] // No SoundCloud credits
     }
