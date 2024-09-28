@@ -168,7 +168,7 @@
 
     /* Adjust the logo size for mobile */
     .logo {
-        height: 80px; /* Adjust height as needed for mobile */
+        height: 40px; /* Adjust height as needed for mobile */
         margin-bottom: 10px; /* Add spacing between logo and social dock */
     }
 
