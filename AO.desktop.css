@@ -14,6 +14,12 @@ body {
 ::-webkit-scrollbar {
     display: none;
 }
+.boxhead .otherPage {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+
+
 .container {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -113,6 +119,7 @@ body {
 
 /* Contact Me button on the right */
 .contact-me-button {
+    text-decoration: none;
     font-size: 14px;
     background-color: #000000;
     color: #ff0000;
