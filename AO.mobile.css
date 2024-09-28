@@ -177,7 +177,6 @@
         text-decoration: none;
         margin-left: 0; /* Reset the left margin */
         margin-top: 10px; /* Add some space above the button */
-        display: block;
         text-align: center; /* Center-align the button text */
     }
 }
